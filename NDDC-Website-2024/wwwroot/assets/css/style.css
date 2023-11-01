@@ -4168,6 +4168,9 @@ a.search-toggler{
 		margin-bottom: 40px;
 	}
 }
+.team-card-dual{
+	display:flex;
+}
 .team-card{
 	padding: 30px 30px;
 	background-color: var(--thm-white);	
