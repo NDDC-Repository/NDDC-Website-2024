@@ -2816,13 +2816,13 @@ a.search-toggler{
 * Portfolio
 ***********************/
 .portfolio-section{
-	padding-top: 100px;
-	padding-bottom: 120px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 @media (max-width: 1199px) {
 	.portfolio-section{
-		padding-top: 70px;
-		padding-bottom: 70px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 }
 .portfolio-card{
@@ -4894,12 +4894,12 @@ border-radius: 100px;
 ***********************/
 .blog-section{
 	padding-top: 50px;
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 }
 @media(max-width: 1199px) {
 	.blog-section{
-		padding-top:70px;
-		padding-bottom: 70px;
+		padding-top:50px;
+		padding-bottom: 50px;
 	}
 }
 .blog-section.blog-section-two {
@@ -5085,7 +5085,7 @@ border-radius: 100px;
 
 .causes-card-imgbox img{
 	width:100%;
-	height: 40rem;
+	height: 30rem;
 }
 .causes-content{
 	padding: 40px;
