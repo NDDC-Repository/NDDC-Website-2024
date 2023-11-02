@@ -622,8 +622,8 @@ a{
     background-color: transparent;
     margin-bottom: -40px;
 }
-@media(max-width: 1199px){
-	.main-menu.menu-two{
+@media(max-width: 991px) {
+	.main-menu.menu-two {
 		margin-top: 10px
 	}
 }
@@ -671,23 +671,23 @@ a{
 .menu-two .navigation {
 	padding-left: 20px;
 }
-@media (max-width: 1499px) {
-	.navigation{
+@media (max-width: 991px) {
+	.navigation {
 		padding-left: 50px;
-	}	
+	}
 }
-@media (max-width: 1199px) {
-	.navigation{
-		display: none;		
-	}	
+@media (max-width: 991px) {
+	.navigation {
+		display: none;
+	}
 }
 .main-menu .main-menu-list {
 	display: flex;
 	margin: 0;
 	padding: 0;
 }
-@media(max-width: 1399px){
-	.main-menu .main-menu-list{
+@media(max-width: 991px) {
+	.main-menu .main-menu-list {
 		display: none;
 	}
 }
@@ -737,10 +737,10 @@ a{
 .main-menu .main-menu-list > li + li {
 	margin-left: 50px;
 }
-@media (max-width: 1520px) {
+@media (max-width: 991px) {
 	.main-menu .main-menu-list > li + li {
 		margin-left: 30px;
-	}	
+	}
 }
 .main-menu .main-menu-list > li ul {
 	opacity: 0;
@@ -792,10 +792,10 @@ a{
 	margin-left: 30px;
 	margin-right: 30px;
 }
-@media (max-width: 1399px) {
-	.mobile-menu-button{
-		display: block;		
-	}	
+@media (max-width: 991px) {
+	.mobile-menu-button {
+		display: block;
+	}
 }
 @media (max-width: 575px) {
 	.mobile-menu-button{
@@ -850,19 +850,19 @@ a.search-toggler{
 	margin-right: 40px;
 	padding: 12px 20px;
 }
-@media (max-width: 1399px) {
-	.main-menu-right-button{
-		display: none;		
-	}	
+@media (max-width: 991px) {
+	.main-menu-right-button {
+		display: none;
+	}
 }
 .main-menu-right-button .btn-primary a{
  color: var(--thm-white);
  padding: 10px 0px;
 }
-@media (max-width: 1399px) {
-	.main-menu-right-button .btn-primary{
-		padding: 13px 20px;		
-	}	
+@media (max-width: 991px) {
+	.main-menu-right-button .btn-primary {
+		padding: 13px 20px;
+	}
 }
 .main-menu-one-inner{
 	display: flex;
@@ -872,7 +872,7 @@ a.search-toggler{
 	position: relative;
 	z-index: 99;
 }
-@media (max-width: 1399px) {
+@media (max-width: 991px) {
 	.main-menu-one-inner {
 		background-color: inherit;
 		justify-content: end;
@@ -891,8 +891,8 @@ a.search-toggler{
 	margin-right: 60px;
 	display: flex;
 }
-@media(max-width: 1199px){
-	.topbar-one-button{
+@media(max-width: 991px) {
+	.topbar-one-button {
 		display: none;
 	}
 }
