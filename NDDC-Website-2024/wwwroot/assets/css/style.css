@@ -2121,7 +2121,7 @@ a.search-toggler{
 ***********************/
 .service-section{
 	padding-top: 120px;
-	background-image: url("../image/bg/service-bg-1.jpg");
+	background-image: url("../image/bg/service-bg-1.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: var(--thm-dark-black);
