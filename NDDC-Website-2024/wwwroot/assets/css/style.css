@@ -980,7 +980,7 @@ a.search-toggler{
 	margin-top: 10px;
 }
 .slider-content{
-	padding-top: 200px;
+	padding-top: 100px;
 	padding-bottom: 200px;
 	position: relative;
 }
@@ -1123,7 +1123,7 @@ a.search-toggler{
 	opacity: 1;
 }
 .slider-content-two{
-	padding-top: 200px;
+	padding-top: 100px;
 	padding-bottom: 200px;
 }
 @media(max-width: 1199px){
@@ -4509,7 +4509,7 @@ border-radius: 100px;
 	background-repeat: no-repeat;
 	padding-top: 120px;
 	padding-bottom: 340px;
-	margin-bottom: 200px;
+	margin-bottom: 0;
 	background-size: cover;
 	position: relative;
 }
