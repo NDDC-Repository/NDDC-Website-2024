@@ -911,8 +911,8 @@ a.search-toggler{
 	margin-left: 15px;
 	background-color: var(--thm-primary);
 }
-@media(max-width: 1399px){
-	.topbar-one-button .btn-primary{
+@media(max-width: 991px) {
+	.topbar-one-button .btn-primary {
 		display: none;
 	}
 }
@@ -922,7 +922,7 @@ a.search-toggler{
 	}
 }
 .topbar-one-button .btn-primary:hover,.topbar-one-button .btn-primary:focus,.topbar-one-button .btn-primary.active {
-	background-color: var(--thm-primary);;
+	background-color: var(--thm-primary);
 }
 .topbar-one-button a {
 	flex-shrink: 0;
@@ -4169,8 +4169,14 @@ a.search-toggler{
 		margin-bottom: 40px;
 	}
 }
+
 .team-card-dual{
 	display:flex;
+}
+@media (max-width: 991px) {
+	.team-card-dual {
+		display: block !important;
+	}
 }
 .team-card{
 	padding: 30px 30px;
@@ -4498,7 +4504,7 @@ border-radius: 100px;
 * Testimonial
 ***********************/
 .testimonial-section{
-	background-image: url("../image/bg/testimonial-bg-1.jpg");
+	background-image: url("../image/bg/testimonial-bg-1.png");
 	background-color: var(--thm-black);
 	background-repeat: no-repeat;
 	padding-top: 120px;
@@ -5605,7 +5611,7 @@ border-radius: 100px;
 .mobile-nav-toggler span{
 	background-color: var(--thm-black);
 }
-@media(max-width: 1399px){
+@media(max-width: 991px){
  .menu-two .mobile-nav-toggler span{
 	 	background-color: var(--thm-white);
 	 }
