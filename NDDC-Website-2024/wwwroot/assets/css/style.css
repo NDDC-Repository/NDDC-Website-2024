@@ -446,7 +446,7 @@ a{
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--thm-black);
-	padding-right: 60px;
+	padding-right: 20px;
 }
 .topbar-left{
 	display: flex;
@@ -516,11 +516,16 @@ a{
 	color: var(--thm-white);
 }
 .topbar-text{
+	margin-left: 10px;
+	font-family: var(--thm-font);
+	font-size: 13px;
+}
+.topbar-text-div {
 	margin-left: 0px;
 	font-family: var(--thm-font);
 	font-size: 13px;
 }
-.topbar-text span{
+.topbar-text span {
 	color: var(--thm-secondary);
 	font-size: 13px;
 	margin-left: 5px;
