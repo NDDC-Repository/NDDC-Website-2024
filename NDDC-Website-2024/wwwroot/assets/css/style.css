@@ -465,7 +465,7 @@ a{
 	margin-left: 25px;
 }
 .topbar-info{
-	padding: 10px 10px 10px 40px;
+	padding: 10px;
 	color: var(--thm-secondary);
 }
 .topbar-one-middle .topbar-info {
@@ -497,7 +497,7 @@ a{
 	}
 }
 .topbar-info ul li + li {
-	margin-left: 35px;
+	margin-left: 15px;
 }
 @media(max-width: 991px){
 	.topbar-info ul li + li{
@@ -509,7 +509,7 @@ a{
 	font-size: 14px;
 }
 .topbar-text a{
-	margin-left: 5px;
+	margin-left: 3px;
 	font-size: 13px;
 }
 .topbar-text a:hover{
@@ -1267,7 +1267,7 @@ a.search-toggler{
 }
 .department-search-form{
 	display: flex;
-	justify-content: flex-end;
+	justify-content: flex-start;
 }
 .department-search-form input{
 	max-width: 400px;
@@ -2144,7 +2144,7 @@ a.search-toggler{
 }
 .service-section .section-text p{
 	color: var(--thm-secondary);
-	margin-bottom: 110px;
+	margin-bottom: px;
 }
 .service-arrow-image {
 	position: relative;
@@ -2169,6 +2169,9 @@ a.search-toggler{
 	background-position: bottom center;
 	padding: 60px 60px;
 	margin-bottom: -60px;
+}
+.service-card-img {
+	position:relative;
 }
 @media(max-width: 1199px){
 	.service-card{
