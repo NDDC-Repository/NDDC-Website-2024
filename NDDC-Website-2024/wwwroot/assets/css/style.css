@@ -497,7 +497,7 @@ a{
 	}
 }
 .topbar-info ul li + li {
-	margin-left: 15px;
+	margin-left: 5px;
 }
 @media(max-width: 991px){
 	.topbar-info ul li + li{
@@ -516,13 +516,14 @@ a{
 	color: var(--thm-white);
 }
 .topbar-text{
-	margin-left: 5px;
+	margin-left: 0px;
 	font-family: var(--thm-font);
 	font-size: 13px;
 }
 .topbar-text span{
 	color: var(--thm-secondary);
 	font-size: 13px;
+	margin-left: 5px;
 }
 .topbar-right{
 	padding: 10px 0px;
