@@ -4984,7 +4984,18 @@ border-radius: 100px;
 	color:inherit;
 	transition: all 500ms ease;
 }
-.blog-card-content h4 > a:hover{
+.blog-card-content h4 > a:hover {
+	color: var(--thm-primary);
+}
+.blog-card-content h5{
+	line-height: 36px;
+}
+.blog-card-content h5 > a{
+	font-size: 24px;
+	color:inherit;
+	transition: all 500ms ease;
+}
+.blog-card-content h5 > a:hover{
 	color: var(--thm-primary);
 }
 .blog-card-content p{
