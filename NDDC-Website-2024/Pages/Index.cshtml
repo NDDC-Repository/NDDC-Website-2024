@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="row">
+@*<div class="row">
 	<div class="col-md-9">
 		<section class="main-slider">
 			<div class="main-slider-swiper owl-carousel owl-theme owl-loaded owl-drag">
@@ -40,10 +40,47 @@
 	<div class="col-md-3">
 		<a class="twitter-timeline" data-lang="en" data-width="500" data-height="500" href="https://twitter.com/NDDCOnline?ref_src=twsrc%5Etfw">Tweets by NDDCOnline</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
-</div>
+</div>*@
 
+<section class="main-slider">
+	<div class="main-slider-swiper owl-carousel owl-theme owl-loaded owl-drag">
+		<!--item-->
+		<!--item-->
+		<div class="owl-stage-outer">
+			<div class="owl-stage" style="transform: translate3d(-4269px, 0px, 0px); transition: all 0.25s ease 0s; width: 8538px;">
+				@foreach (var item in Model.NewsSlide)
+						{
+							<div class="owl-item" style="width: 1248px; height: 500px;">
+								<div class="item">
+									<div class="item-slider-bg" style="background-image: url(@Model._containerUrl@item.ImageUrl)"></div>
+									<div class="container">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="slider-content">
+													<div class="slider-tagline">Niger Delta Development Commission</div>
+													<h3 class="section-title">@item.Subject</h3>
+													<a href="index-2.html" class="btn btn-primary">Discover More</a>
+												</div><!-- slider-content -->
+											</div><!-- col-md-12 -->
+										</div><!-- row -->
+									</div><!-- container -->
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+			<div class="owl-nav">
+				<button type="button" role="presentation" class="owl-prev">
+					<i class="fa-solid fa-arrow-left-long"></i>
+				</button>
+				<button type="button" role="presentation" class="owl-next">
+					<i class="fa-solid fa-arrow-right-long"></i>
+				</button>
+			</div>
+			<div class="owl-dots disabled"></div>
+		</div><!-- main-slider-swiper -->
+</section>
 <!--main-slider-->
-
 
 <section class="department-section">
 	<div class="container">
@@ -120,7 +157,74 @@
 			</form><!-- department-search-form -->
 		</div><!-- container -->
 	</div> *@<!-- department-search-section -->
-</section><!--department-section-->
+</section><!-- Carousel -->
+
+<section class="about-section">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-6">
+				<div class="about-image">
+					<div class="about-image-inner img-one">
+						<img src="assets/image/gallery/about-1.jpg" class="img-fluid" alt="img-2">
+						@*<div class="sign-text">Kevin Martin</div><!-- sign-text -->*@
+						<div class="about-caption-image">
+						<div class="about-two-service-video">
+								<a href="https://www.youtube.com/watch?v=rzfmZC3kg3M" class="video-popup">
+									<i class="fa fa-play"></i>
+								</a><!-- video-popup -->
+							</div>
+						</div>
+						@*<div class="about-image-caption">
+							<div class="about-image-caption-inner">
+								<div class="about-two-service-video">
+									<a href="https://www.youtube.com/watch?v=rzfmZC3kg3M" class="video-popup">
+										<i class="fa fa-play"></i>
+									</a><!-- video-popup -->
+								</div>
+							</div><!-- about-image-caption-inner -->
+						</div><!--about-image-caption-->*@
+					</div><!--about-image-inner img-one-->
+					<div class="about-image-inner img-two">
+						<img src="assets/image/shapes/about-3.jpg" class="floated-image" alt="img-3">
+						<img src="assets/image/gallery/about-2.jpg" class="img-fluid" alt="img-4">
+					</div><!--about-image-inner img-two-->
+				</div><!--about-image-->
+			</div><!--col-lg-6-->
+			<div class="col-lg-6">
+				<div class="about-inner">
+					<div class="section-title-box">
+						<div class="section-tagline">Our introductions</div><!-- section-tagline -->
+						<h2 class="section-title">Welcome &amp; Support to City Municipal</h2>
+						<p>Aliquam viverra arcu. Donec aliquet blandit enim feugiat. Suspendisse id quam sed eros tincidunt luctus sit amet eu nibh egestas tempus turpis, sit amet mattis magna varius non.</p>
+					</div><!-- section-title-box -->
+					<div class="row">
+						<div class="col-xl-6 col-lg-12 col-md-6">
+							<div class="about-card">
+								<h4 class="about-title"><i class="fa-solid fa-circle-check"></i>Business &amp; Economy</h4>
+								<p class="about-text">Lorem ipsum dolor sited amet consectetur notted.</p>
+							</div><!-- about-card -->
+						</div><!-- col-xl-6 col-lg-12 col-md-6 -->
+						<div class="col-xl-6 col-lg-12 col-md-6">
+							<div class="about-card">
+								<h4 class="about-title"><i class="fa-solid fa-circle-check"></i>Health &amp; Education</h4>
+								<p class="about-text">Lorem ipsum dolor sited amet consectetur notted.</p>
+							</div><!-- about-card -->
+						</div><!-- col-xl-6 col-lg-12 col-md-6 -->
+					</div><!--row-->
+					<div class="about-author-box">
+						<div class="about-author-image">
+							<img src="assets/image/gallery/about-4.png" class="img-fluid" alt="img-5">
+						</div><!-- about-author-image -->
+						<div class="about-author-box-meta">
+							<h5>Mr. Kevin Martin</h5>
+							<span>City Mayor</span>
+						</div><!-- about-author-box-meta -->
+					</div><!--about-author-box-->
+				</div><!-- about-inner -->
+			</div><!--col-lg-6-->
+		</div><!-- row -->
+	</div><!-- container -->
+</section><!-- Welcome Message -->
 
 <section class="blog-section">
 	<div class="container">
@@ -266,7 +370,65 @@
 			</div><!-- col-lg-4 -->
 		</div><!-- row -->*@
 	</div><!-- container -->
-</section><!-- blog-section -->
+</section><!-- Updates -->
+
+<section class="cta-three">
+	<div class="cta-three-inner">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="cta-three-content text-center">
+						<h2 class="section-title text-white">City Goverment Offers a Wide <br>Range of Online Services</h2>
+							<a href="contact.html" class="btn btn-primary">Discover More </a> 
+					</div><!-- cta-three-content -->
+				</div><!-- col-lg-12 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!--cta-three-inner-->
+</section><!-- Core Values -->
+
+<section class="blog-section">
+	<div class="container">
+		<div class="blog-box">
+			<div class="section-title-box text-center">
+				<div class="section-tagline">Updates From Our Programs and Activities</div>
+				<h2 class="section-title">News Point</h2>
+			</div><!-- section-title-box -->
+		</div><!--blog-box-->
+		<div class="row row-gutter-y-155 news-top">
+			@foreach (var item in Model.NewsList)
+			{
+				<div class="col-lg-4">
+					<div class="blog-card">
+						<div class="blog-card-image">
+							<img src="@Model._containerUrl@item.ImageUrl" width="350" height="300" class="img-fluid" alt="img-22">
+							<a href="news-details.html"></a>
+						</div><!-- blog-card-image -->
+						<div class="blog-card-date">
+							<a href="news-details.html">28SEP</a>
+						</div><!-- blog-card-date -->
+						<div class="blog-card-content">
+							<div class="blog-card-meta">
+								<span class="author">
+									By: <a href="news-details.html">Cooperate Affairs Dept.</a>
+								</span><!-- author -->
+								@* <span class="comment">
+									<a href="news-details.html">02 Comments</a>
+								</span> *@<!-- comment -->
+							</div><!-- blog-card-meta -->
+							<h4><a href="news-details.html">@item.Subject</a></h4>
+							<p>@item.Summary</p>
+						</div><!-- blog-card-content -->
+					</div><!-- blog-card -->
+				</div>
+
+				<!-- col-lg-4 -->
+			}
+			
+			
+		</div><!-- row -->
+	</div><!-- container -->
+</section><!-- News Point -->
 
 <section class="portfolio-section">
 	<div class="section-title-box text-center">
@@ -374,7 +536,7 @@
 					<button role="button" class="owl-dot active"><span></span></button></div>
 		</div><!--portfolio-carousel-->
 	</div><!--portfolio-content-->
-</section><!--portfolio-section-->
+</section><!--Photo Speak-->
 
 <div class="row text-center justify-content-center">
 	<div class="col-lg-6 align-content-center">
@@ -383,7 +545,7 @@
 			<h2 class="section-title">Testimonials</h2>
 		</div><!-- section-title-box -->
 	</div>
-</div>
+</div><!-- Testimonial Header -->
 <section class="testimonial-section">
 	<div class="container">
 		<div class="testimonial-name">TESTIMONIALS</div>
@@ -604,9 +766,89 @@
 				
 		</div><!--event-section-inner-->
 	</div><!--container-->
-</section><!--event-section-->
+</section><!--Executives-->
 
-<section class="blog-section">
+<section class="service-one-section">
+	<div class="container">
+		<div class="section-title-box text-center">
+			<div class="section-tagline">Our Recent Publications</div>
+			<h2 class="section-title">Publications </h2>
+		</div>
+		<!-- section-title-box -->
+
+		<div class="row row-gutter-30">
+			<div class="col-lg-6 col-xl-4">
+				<div class="service-one-card">
+					<div class="service-one-icon">
+						<a href="service-details.html"><i class="flaticon-education"></i></a>
+					</div><!-- service-one-icon -->
+					<div class="service-one-card-content">
+						<h4><a href="service-details.html"> Education &amp; Skills</a></h4>
+						<p>When nothing prevents our being able to we like best every.</p>
+					</div><!-- service-one-card-content -->
+				</div><!--service-one-card-->
+			</div><!--col-lg-6 col-xl-4-->
+			<div class="col-lg-6 col-xl-4">
+				<div class="service-one-card">
+					<div class="service-one-icon">
+						<a href="service-details.html"><i class="flaticon-public-transport-1"></i></a>
+					</div><!-- service-one-icon -->
+					<div class="service-one-card-content">
+						<h4><a href="service-details.html">Roads &amp; Transportation</a></h4>
+						<p>When nothing prevents our being able to we like best every.</p>
+					</div><!-- service-one-card-content -->
+				</div><!--service-one-card-->
+			</div><!--col-lg-6 col-xl-4-->
+			<div class="col-lg-6 col-xl-4">
+				<div class="service-one-card">
+					<div class="service-one-icon">
+						<a href="service-details.html"><i class="flaticon-agriculture"></i></a>
+					</div><!-- service-one-icon -->
+					<div class="service-one-card-content">
+						<h4><a href="service-details.html">Culture &amp; Recreation</a></h4>
+						<p>When nothing prevents our being able to we like best every.</p>
+					</div><!-- service-one-card-content -->
+				</div><!--service-one-card-->
+			</div><!--col-lg-6 col-xl-4-->
+			<div class="col-lg-6 col-xl-4">
+				<div class="service-one-card">
+					<div class="service-one-icon">
+						<a href="service-details.html"><i class="flaticon-factory"></i></a>
+					</div><!-- service-one-icon -->
+					<div class="service-one-card-content">
+						<h4><a href="service-details.html">Business &amp; Industry</a></h4>
+						<p>When nothing prevents our being able to we like best every.</p>
+					</div><!-- service-one-card-content -->
+				</div><!--service-one-card-->
+			</div><!--col-lg-6 col-xl-4-->
+			<div class="col-lg-6 col-xl-4">
+				<div class="service-one-card">
+					<div class="service-one-icon">
+						<a href="service-details.html"><i class="flaticon-businessman"></i></a>
+					</div><!-- service-one-icon -->
+					<div class="service-one-card-content">
+						<h4><a href="service-details.html">Jobs &amp; Unemployment</a></h4>
+						<p>When nothing prevents our being able to we like best every.</p>
+					</div><!-- service-one-card-content -->
+				</div><!--service-one-card-->
+			</div><!--col-lg-6 col-xl-4-->
+			<div class="col-lg-6 col-xl-4">
+				<div class="service-one-card">
+					<div class="service-one-icon">
+						<a href="service-details.html"><i class="flaticon-clinic"></i></a>
+					</div><!-- service-one-icon -->
+					<div class="service-one-card-content">
+						<h4><a href="service-details">Health &amp; Securities</a></h4>
+						<p>When nothing prevents our being able to we like best every.</p>
+					</div><!-- service-one-card-content -->
+				</div><!--service-one-card-->
+			</div><!--col-lg-6 col-xl-4-->
+		</div><!-- row -->
+	</div><!-- container -->
+</section> <!-- Publications -->
+
+
+@*<section class="blog-section">
 	<div class="container">
 		<div class="blog-box">
 			<div class="section-title-box text-center">
@@ -633,7 +875,7 @@
 								</span><!-- author -->
 								@* <span class="comment">
 									<a href="news-details.html">02 Comments</a>
-								</span> *@<!-- comment -->
+								</span> <!-- comment -->@*
 							</div><!-- blog-card-meta -->
 							<h4><a href="news-details.html">@item.Subject</a></h4>
 							<p>@item.Summary</p>
@@ -647,10 +889,11 @@
 			
 		</div><!-- row -->
 	</div><!-- container -->
-</section><!-- blog-section -->
+</section>*@
+<!-- blog-section -->
 
 
-<section class="portfolio-section">
+@*<section class="portfolio-section">
 	<div class="container">
 	<div class="section-title-box text-center">
 		<div class="section-tagline">Our Recent Publications</div>
@@ -695,7 +938,9 @@
 				</div><!-- col-lg-6 col-xl-4 -->
 			</div>
 			</div>
-	</section><!--publications-section-->
+	</section><!--publications-section-->*@
+<!-- old Publications -->
+
 
 <section class="portfolio-section">
 	<div class="container">
