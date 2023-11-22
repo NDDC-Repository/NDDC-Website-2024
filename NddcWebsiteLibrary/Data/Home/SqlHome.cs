@@ -20,7 +20,7 @@ namespace NddcWebsiteLibrary.Data.Home
 
         public List<MyNewsModel> DisplaySlides()
         {
-            return db.LoadData<MyNewsModel, dynamic>("Select Top 2 NID, Subject, Summary, ImageUrl From News Order By NID DESC", new { }, connectionStringName, false).ToList();
+            return db.LoadData<MyNewsModel, dynamic>("Select Top 5 NID, Subject, Summary, ImageUrl From News Order By NID DESC", new { }, connectionStringName, false).ToList();
         }
         public List<MyNewsModel> AllNews()
         {
