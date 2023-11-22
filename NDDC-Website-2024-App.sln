@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NDDC-Website-2024", "NDDC-Website-2024\NDDC-Website-2024.csproj", "{54AFFCCA-ED35-4239-9F39-A00158D6EA35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NddcWebsiteLibrary", "NddcWebsiteLibrary\NddcWebsiteLibrary.csproj", "{0E049D6A-BA78-4AA3-835D-0D8CA8E4DACA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NddcWebsiteLibrary", "NddcWebsiteLibrary\NddcWebsiteLibrary.csproj", "{0E049D6A-BA78-4AA3-835D-0D8CA8E4DACA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

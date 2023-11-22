@@ -14,7 +14,7 @@
 					<div class="owl-stage" style="transform: translate3d(-2496px, 0px, 0px); transition: all 0.25s ease 0s; width: 7488px;">
 						@foreach (var item in Model.NewsSlide)
 						{
-							<div class="owl-item " style="width: 1248px; height: 500px;">
+							<div class="owl-item" style="width: 1248px; height: 500px;">
 								<div class="item">
 									<div class="item-slider-bg" style="background-image: url(@Model._containerUrl@item.ImageUrl)"></div>
 									<div class="container">
@@ -31,8 +31,6 @@
 								</div>
 							</div>
 						}
-						
-						
 					</div>
 				</div>
 				<div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa-solid fa-arrow-left-long"></i></button><button type="button" role="presentation" class="owl-next"><i class="fa-solid fa-arrow-right-long"></i></button></div><div class="owl-dots disabled"></div>
@@ -42,7 +40,7 @@
 	<div class="col-md-3">
 		<a class="twitter-timeline" data-lang="en" data-width="500" data-height="500" href="https://twitter.com/NDDCOnline?ref_src=twsrc%5Etfw">Tweets by NDDCOnline</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
-
+</div>
 
 <!--main-slider-->
 
@@ -54,20 +52,20 @@
 				<div class="col-xl-2 col-lg-4 col-md-6">
 					<div class="department-card">
 						<div class="department-card-icon">
-							<a href="departments.html"><i class="flaticon-parthenon"></i></a>
+							<a href="/WhoWeAre/Vision"><i class="flaticon-parthenon"></i></a>
 						</div><!-- department-card-icon -->
 						<div class="department-card-content">
-							<h5><a href="department-details.html">Our Mission</a></h5>
+							<h5><a href="/WhoWeAre/Vision">Our Mission</a></h5>
 						</div><!-- department-card-content -->
 					</div><!--department-card-->
 				</div><!--col-xl-2 col-lg-4 col-md-6-->
 				<div class="col-xl-2 col-lg-4 col-md-6">
 					<div class="department-card">
 						<div class="department-card-icon">
-							<a href="departments.html"><i class="flaticon-suitcase"></i></a>
+							<a href="/WhoWeAre/ManagementStaff"><i class="flaticon-suitcase"></i></a>
 						</div><!-- department-card-icon -->
 						<div class="department-card-content">
-							<h5><a href="department-details.html">Vision & People</a></h5>
+							<h5><a href="/WhoWeAre/ManagementStaff">Our People</a></h5>
 						</div><!-- department-card-content -->
 					</div><!--department-card-->
 				</div><!--col-xl-2 col-lg-4 col-md-6-->
@@ -370,7 +368,10 @@
 
 					
 				</div>
-			</div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"><button role="button" class="owl-dot active"><span></span></button></div>
+			</div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button>
+				<button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div>
+				<div class="owl-dots">
+					<button role="button" class="owl-dot active"><span></span></button></div>
 		</div><!--portfolio-carousel-->
 	</div><!--portfolio-content-->
 </section><!--portfolio-section-->
