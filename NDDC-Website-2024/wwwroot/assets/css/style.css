@@ -1224,7 +1224,11 @@ a.search-toggler{
 	.department-section .department-section-inner {
 		margin-top: 60px;
 	}
+	.dep {
+		display: none;
+	}
 }
+
 .department-card{
 	text-align: center;
 	padding: 0px 39px;
@@ -1763,6 +1767,9 @@ a.search-toggler{
 	animation: mover 2s infinite  alternate;
 }
 @media (max-width: 575px){
+	.about-image .img-two {
+		margin-left: 15px;
+	}
 	.about-image .img-two .floated-image{
 		display: none;
 	}
@@ -1786,9 +1793,13 @@ a.search-toggler{
 	}
 }
 @media (max-width: 575px) {
-	.about-inner{
+	.about-inner {
+		padding-left: 10px;
 		padding-top: 50px;
 		padding-bottom: 50px;
+	}
+	.about-inner .section-title {
+		font-size: 40px;
 	}
 }
 .about-section .section-title-box{
@@ -1965,7 +1976,7 @@ a.search-toggler{
 }
 .about-two-service-video {
 	position: absolute;
-	right: 40px;
+	right: 0px;
 	top: 20px;
 }
 .about-two-service-video a{
@@ -2019,6 +2030,12 @@ a.search-toggler{
  .about-two-inner{
 		margin: 0;
 		padding: 0;
+	}
+}
+@media (max-width: 575px) {
+	.about-two-service-video a {
+		width: 40px;
+		height: 40px;
 	}
 }
 .about-two-inner .section-tagline{
@@ -2160,7 +2177,7 @@ a.search-toggler{
 }
 .service-section .section-text p{
 	color: var(--thm-secondary);
-	margin-bottom: px;
+	margin-bottom: 0px;
 }
 .service-arrow-image {
 	position: relative;
