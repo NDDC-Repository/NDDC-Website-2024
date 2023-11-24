@@ -209,9 +209,9 @@ a{
 	background-color: var(--thm-primary);
 	text-align: center;
 	position: fixed;
-	right: 30px;
+	left: 10px;
 	color: #fff;
-	bottom: 90px;
+	bottom: 20px;
 	z-index: 1111111;
 }
 
