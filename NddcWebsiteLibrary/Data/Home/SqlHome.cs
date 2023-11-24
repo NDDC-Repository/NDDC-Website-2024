@@ -31,5 +31,12 @@ namespace NddcWebsiteLibrary.Data.Home
             //list all items in home page
             return db.LoadData<MyNewsModel, dynamic>("select top 3 ROW_NUMBER() OVER (ORDER BY NID DESC) As SrNo, NID, Subject, Summary, ImageUrl, PublishDate, ExpiryDate, Views, Clicks, Type, SetAsSlide from News Order By NID DESC", new { }, connectionStringName, false).ToList();
         }
+
+        //Photo Speak Methods
+
+        public List<MyPhotoSpeakModel> DisplayPhotos()
+        {
+            return db.LoadData<MyPhotoSpeakModel, dynamic>("Select Top 40 Id, Title, Location, ImageUrl From PhotoSPeak Order By Id DESC", new { }, connectionStringName, false).ToList();
+        }
     }
 }

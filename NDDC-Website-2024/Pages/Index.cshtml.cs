@@ -11,8 +11,9 @@ namespace NDDC_Website_2024.Pages
         public List<MyNewsModel> NewsSlide { get; set; }
         public List<MyNewsModel> NewsList { get; set; }
         public readonly string _containerUrl;
+        public List<MyPhotoSpeakModel> Photos { get; set; }
 
-		public IndexModel(IHomeData homeDb, IConfiguration configuration)
+        public IndexModel(IHomeData homeDb, IConfiguration configuration)
         {
             this.homeDb = homeDb;
 			_containerUrl = configuration.GetConnectionString("AWSContainerUrl");
@@ -22,6 +23,7 @@ namespace NDDC_Website_2024.Pages
         {
             NewsSlide = homeDb.DisplaySlides();
             NewsList = homeDb.ListHomePageNews();
+            Photos = homeDb.DisplayPhotos();
         }
     }
 }
