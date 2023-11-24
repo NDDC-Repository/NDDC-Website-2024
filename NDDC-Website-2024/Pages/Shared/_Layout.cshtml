@@ -42,6 +42,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/image/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/image/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/image/favicons/site.webmanifest">
+
 </head>
 @* <head>
     <meta charset="utf-8" />
@@ -397,7 +398,20 @@
 	</div>
 
 	<a href="#" class="scroll-to-top scroll-to-target" data-target="html" style=""><i class="fa-solid fa-arrow-up"></i></a>
+	
+	<button class="btn bot-button text-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-robot align-self-center"></i></button>
 
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasRightLabel"> NDDC ChatBot</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+			<iframe src="https://web.powerva.microsoft.com/environments/Default-f2b10c06-4bd1-4c9c-b500-f2541e79aa92/bots/cr7c8_nddcAi/webchat?_version_=2" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+			</div>
+	</div>
+	
+	
     @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
     @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@

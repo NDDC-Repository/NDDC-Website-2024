@@ -203,6 +203,22 @@ a{
 	background-color: var(--thm-black);
 	color: #fff;
 }
+
+.bot-button {
+	height: 40px;
+	background-color: var(--thm-primary);
+	text-align: center;
+	position: fixed;
+	right: 30px;
+	color: #fff;
+	bottom: 90px;
+	z-index: 1111111;
+}
+
+.bot-button:hover {
+	background-color: var(--thm-black);
+	color: #fff;
+}
 /***********************
 * Animations
 ***********************/
@@ -1651,8 +1667,8 @@ a.search-toggler{
 	position: relative;
 	top: -140px;
 }
-@media (max-width: 1399px) {
-	.about-image .img-one{
+@media (max-width: 991px) {
+	.about-image .img-one {
 		top: 0px;
 	}
 }
