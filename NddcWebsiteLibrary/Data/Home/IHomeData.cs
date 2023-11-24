@@ -7,6 +7,7 @@ namespace NddcWebsiteLibrary.Data.Home
         List<MyNewsModel> AllNews();
         List<MyPhotoSpeakModel> DisplayPhotos();
         List<MyNewsModel> DisplaySlides();
+        MyUpdateModel? GetImageByUpdateCategory(string updateCategory);
         List<MyNewsModel> ListHomePageNews();
     }
 }

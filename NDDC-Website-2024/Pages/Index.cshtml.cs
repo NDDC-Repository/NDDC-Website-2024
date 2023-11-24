@@ -12,6 +12,7 @@ namespace NDDC_Website_2024.Pages
         public List<MyNewsModel> NewsList { get; set; }
         public readonly string _containerUrl;
         public List<MyPhotoSpeakModel> Photos { get; set; }
+        public MyUpdateModel PhysicalInfraUpdatePhoto { get; set; }
 
         public IndexModel(IHomeData homeDb, IConfiguration configuration)
         {
@@ -24,6 +25,7 @@ namespace NDDC_Website_2024.Pages
             NewsSlide = homeDb.DisplaySlides();
             NewsList = homeDb.ListHomePageNews();
             Photos = homeDb.DisplayPhotos();
+            PhysicalInfraUpdatePhoto = homeDb.GetImageByUpdateCategory("Physical");
         }
     }
 }
