@@ -11,8 +11,4 @@
     <ProjectReference Include="..\NddcWebsiteLibrary\NddcWebsiteLibrary.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\News\" />
-  </ItemGroup>
-
 </Project>
