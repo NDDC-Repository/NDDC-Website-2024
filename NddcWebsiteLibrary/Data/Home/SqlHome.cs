@@ -39,7 +39,7 @@ namespace NddcWebsiteLibrary.Data.Home
             return db.LoadData<MyPhotoSpeakModel, dynamic>("Select Top 40 Id, Title, Location, ImageUrl From PhotoSPeak Order By Id DESC", new { }, connectionStringName, false).ToList();
         }
 
-        public MyUpdateModel? GetImageByUpdateCategory(string updateCategory)
+        public MyUpdateModel GetImageByUpdateCategory(string updateCategory)
         {
             return db.LoadData<MyUpdateModel, dynamic>("select top 1 Id, Title, DescriptionImage from Updates Where UpdateCategory = @UpdateCategory Order By Id DESC", new { UpdateCategory = updateCategory }, connectionStringName, false).SingleOrDefault();
         }
