@@ -206,7 +206,7 @@ a{
 
 .bot-button {
 	height: 40px;
-	background-color: var(--thm-primary);
+	background-color: var(--thm-black);
 	text-align: center;
 	position: fixed;
 	left: 10px;
@@ -215,10 +215,10 @@ a{
 	z-index: 1111111;
 }
 
-.bot-button:hover {
-	background-color: var(--thm-black);
-	color: #fff;
-}
+	.bot-button:hover {
+		background-color: var(--thm-primary);
+		color: #fff;
+	}
 /***********************
 * Animations
 ***********************/
@@ -1004,13 +1004,18 @@ a.search-toggler{
 	margin-top: 10px;
 }
 .slider-content{
-	padding-top: 100px;
-	padding-bottom: 200px;
+	padding-top: 250px;
+	padding-bottom: 250px;
 	position: relative;
 }
 @media(max-width: 991px){
 	.slider-content{
 		padding: 140px 0px;
+	}
+}
+@media(max-width: 1400px){
+	.slider-content{
+		padding: 200px 0px;
 	}
 }
 .slider-tagline{
@@ -1032,7 +1037,7 @@ a.search-toggler{
 	margin-bottom: 35px;
 }
 .slider-content .section-title{
-	font-size: 60px;
+	font-size: 90px;
 	font-weight: 800;
 	color: var(--thm-white);
 	font-family: var(--thm-font);
