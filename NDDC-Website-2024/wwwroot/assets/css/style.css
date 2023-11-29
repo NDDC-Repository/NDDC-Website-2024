@@ -1008,16 +1008,16 @@ a.search-toggler{
 	padding-bottom: 250px;
 	position: relative;
 }
-@media(max-width: 991px){
+@media(max-width: 1400px){
 	.slider-content{
 		padding: 140px 0px;
 	}
 }
-@media(max-width: 1400px){
+/*@media(max-width: 1400px){
 	.slider-content{
 		padding: 200px 0px;
 	}
-}
+}*/
 .slider-tagline{
 	font-size: 20px;
 	color: #fff;
