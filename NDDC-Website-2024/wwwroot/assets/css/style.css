@@ -1004,8 +1004,8 @@ a.search-toggler{
 	margin-top: 10px;
 }
 .slider-content{
-	padding-top: 250px;
-	padding-bottom: 250px;
+	padding-top: 200px;
+	padding-bottom: 300px;
 	position: relative;
 }
 @media(max-width: 1400px){
@@ -5154,6 +5154,11 @@ border-radius: 100px;
 .causes-card-imgbox img{
 	width:100%;
 	height: 30rem;
+}
+
+.vision-card-imgbox img {
+	width: 100%;
+	height: 20rem;
 }
 .causes-content{
 	padding: 40px;
