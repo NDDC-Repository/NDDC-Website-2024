@@ -2170,6 +2170,10 @@ a.search-toggler{
 	background-color: var(--thm-primary);
 	color: var(--thm-white);
 }
+
+.theme-color {
+	color: var(--thm-primary);
+}
 /***********************
 * Service
 ***********************/
