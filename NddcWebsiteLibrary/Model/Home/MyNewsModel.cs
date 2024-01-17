@@ -11,6 +11,39 @@ namespace NddcWebsiteLibrary.Model.Home
         public int Id { get; set; }
         public string Subject { get; set; }
         public string Summary { get; set; }
+
+        private string mShortSubject;
+
+        public string ShortSubject
+        {
+            get {
+                if (Subject.Length > 50)
+                {
+					mShortSubject = Subject.Substring(0, 50);
+					return mShortSubject;
+				}
+                mShortSubject = Subject;
+
+				return mShortSubject;
+			}
+               
+        }
+        private string mShortSummary;
+
+        public string ShortSummary
+        {
+            get
+            {
+                if (Summary.Length > 100)
+                {
+					mShortSummary = Summary.Substring(0, 100);
+					return mShortSummary;
+				}
+                mShortSummary = Summary;
+                return mShortSummary;
+            }
+        }
+
         public string NewsId { get; set; }
         public string Details { get; set; }
         public string ImageUrl { get; set; }
