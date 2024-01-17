@@ -452,12 +452,14 @@
 		</div>
 	</div>*@
 <section class="cta-three">
-	<div class="cta-three-inner pt-4 pb-1">
-		<div class="container">
+	<div class=" position-relative pt-5 pb-1">
+		<img class="parallax img-fluid" src="/assets/image/bg/cta-bg-3.png" />
+		<div class="container position-absolute top-50 start-50 translate-middle">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="cta-three-content align-items-center justify-content-between">
-						<div class="row">
+						
+						<div class="row shadow-lg p-3 rounded" style="background-color: #03335c7a;">
 							<div class="col-lg-6 pe-lg-5">
 								<div class="about-card ">
 									<h1 class="theme-color"> 
@@ -1054,7 +1056,7 @@
 	</div><!-- container -->
 </section><!--about-section-->*@
 
-<section class="service-section">
+<section class="service-section animate__animated animate__fadeInUpBig">
 	<div class="container">
 		<div class="row justify-content-between">
 			<div class="col-lg-6">
@@ -1227,7 +1229,7 @@
 				<p>You can send us a report on the performance of NDDC Projects in your community to give us direct performance reports on our project.</p>
 			</div><!-- cta-five-content -->
 			<div class="cta-five-button">
-				<a href="#" class="btn btn-primary d-flex align-items-center">Send <i class="fa-solid fa-info rounded p-2 mx-2 bg-success"></i> Report</a>
+				<a href="#" class="btn btn-primary d-flex align-items-center justify-content-center">Send <i class="fa-solid fa-info rounded p-2 mx-2 bg-success"></i> Report</a>
 			</div><!-- cta-five-button -->
 			<div class="cta-five-img">
 				<i class="flaticon-file"></i>
@@ -1265,3 +1267,10 @@
 		</div><!-- cta-two-section-inner -->
 	</div><!-- container -->
 </section><!--cta-two-section-->
+
+<script type='text/javascript'>
+	var image = document.getElementsByClassName('parallax');
+	new simpleParallax(image, {
+		scale: 2.0
+	});
+</script>
