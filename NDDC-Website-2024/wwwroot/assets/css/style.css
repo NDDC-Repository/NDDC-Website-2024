@@ -3413,7 +3413,7 @@ a.search-toggler{
 		min-width: 190px;
 	}
 }
-@media only screen and (max-width: 1200px) {
+/*@media only screen and (max-width: 1200px) {
 	.parralax-text {
 		transform: translate(-50%,-50%) !important;
 		left: 50% !important;
@@ -3427,7 +3427,7 @@ a.search-toggler{
 	.cta-three-inner{
 		display:none;
 	}
-}
+}*/
 .cta-three-inner{
 	background-image: url("../image/bg/cta-bg-3.png");
 	background-color: var(--thm-black);
