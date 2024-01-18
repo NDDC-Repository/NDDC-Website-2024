@@ -18,8 +18,15 @@ namespace NddcWebsiteLibrary.Model.Home
         public string ShortTitle
         {
             get { 
-                mShortTitle = Title.Substring(0,60);
-                return mShortTitle; }
+                if (Title.Length > 60)
+                {
+                    mShortTitle = Title.Substring(0, 60);
+                    return mShortTitle;
+                }
+                mShortTitle = Title;
+                return mShortTitle;
+            }
+                
         }
 
         public string Location { get; set; }
