@@ -1056,8 +1056,9 @@ a.search-toggler{
 	position: relative;
 }
 @media(max-width: 1400px){
-	.slider-content{
-		padding: 140px 0px;
+	.slider-content {
+		padding-top: 70px;
+		padding-bottom: 250px;
 	}
 }
 /*@media(max-width: 1400px){
