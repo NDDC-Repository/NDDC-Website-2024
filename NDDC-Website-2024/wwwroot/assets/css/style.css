@@ -800,11 +800,15 @@ a{
 	padding: 23px 0;
 }
 .main-menu .main-menu-list > li + li {
-	margin-left: 50px;
+	margin-left: 35px;
 }
-@media (max-width: 1020px) {
+@media (max-width: 1170px) {
 	.main-menu .main-menu-list > li + li {
 		margin-left: 20px;
+	}
+	.navigation {
+		padding-left: 30px;
+		padding-right: 15px;
 	}
 }
 
@@ -1106,6 +1110,37 @@ a.search-toggler{
 }
 @media (max-width: 575px) {
 	.slider-content .section-title{
+		font-size: 30px;
+	}
+	.slider-content .slider-tagline {
+		font-size: 10px;
+	}
+}
+
+.section-title-box .section-title {
+	font-size: 75px;
+}
+
+@media (max-width: 1199px) {
+	.section-title-box .section-title {
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 991px) {
+	.section-title-box .section-title {
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-title-box .section-title {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 575px) {
+	.section-title-box .section-title {
 		font-size: 30px;
 	}
 }
@@ -3403,7 +3438,7 @@ a.search-toggler{
 @media only screen and (max-width: 575px) {
 	.cta-two-card-button .btn-primary{
 		display: block;
-		max-width: 100%;
+		max-width: 100%;5
 		margin-left: 0;
 		margin-top: 15px;
 	}
