@@ -1084,7 +1084,7 @@ a.search-toggler{
 	margin-bottom: 35px;
 }
 .slider-content .section-title{
-	font-size: 90px;
+	font-size: 50px;
 	font-weight: 800;
 	color: var(--thm-white);
 	font-family: var(--thm-font);
@@ -1095,17 +1095,17 @@ a.search-toggler{
 }
 @media (max-width: 1199px) {
 	.slider-content .section-title{
-		font-size: 70px;
+		font-size: 45px;
 	}
 }
 @media (max-width: 991px) {
 	.slider-content .section-title{
-		font-size: 60px;
+		font-size: 40px;
 	}
 }
 @media (max-width: 767px) {
 	.slider-content .section-title{
-		font-size: 50px;
+		font-size: 35px;
 	}
 }
 @media (max-width: 575px) {
