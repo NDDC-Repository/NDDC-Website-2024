@@ -130,11 +130,6 @@ p{
 	margin-bottom: 20px;
 }
 
-@media(min-width: 1200px) {
-	p {
-		font-size: 1.3vw;
-	}
-}
 
 .btn-primary{
 	padding: 18px 50px;
@@ -1092,7 +1087,7 @@ a.search-toggler{
 	margin-bottom: 35px;
 }
 .slider-content .section-title{
-	font-size: 50px;
+	font-size: 70px;
 	font-weight: 800;
 	color: var(--thm-white);
 	font-family: var(--thm-font);
