@@ -116,16 +116,18 @@
 			</div><!-- row -->
 		</div><!--department-section-inner-->
 	</div><!-- container -->
-	@* <div class="department-search-section">
+	<div class="department-search-section">
 		<div class="container">
-			<form class="department-search-form">
-				<input type="text" placeholder="Get our quick services from the city municipal" name="search">
-				<button type="submit">View All Services</button>
+			<form class="department-search-form justify-content-end">
+				<input type="email" placeholder="Keep up with our Latest News and Updates" name="email">
+				<button type="submit">Subscribe</button>
 			</form><!-- department-search-form -->
 		</div><!-- container -->
-	</div> *@<!-- department-search-section -->
+	</div><!-- department-search-section -->
 </section><!-- Carousel -->
 <!--Home Shortcuts-->
+
+
 
 <!--Wecome Section-->
 <section class="about-section">
@@ -187,7 +189,7 @@
 </section>
 <!--Welcome Section-->
 
-@* <!--Updates Section-->
+<!--Updates Section-->
 <section class="blog-section">
 	<div class="container">
 		<div class="blog-box">
@@ -259,7 +261,7 @@
 					</div><!--department-two-card-->
 				</div><!-- col-lg-6 col-xl-4 -->
 				
-			</div> *@
+			</div>
 		@*<div class="row row-gutter-y-155">
 			<div class="col-lg-4">
 				<div class="blog-card">
@@ -331,8 +333,8 @@
 				</div><!-- blog-card -->
 			</div><!-- col-lg-4 -->
 		</div><!-- row -->*@
-@* 	</div><!-- container -->
-</section> *@
+	</div><!-- container -->
+</section>
 <!--Updates Section Banner-->
 
 @*<div class="elementor-container elementor-column-gap-default">
@@ -505,7 +507,15 @@
 							<a href="news-details.html">28SEP</a>
 						</div><!-- blog-card-date -->
 						<div class="blog-card-content">
-							<h5><a href="/News/News">@item.ShortSubject</a></h5>
+							<div class="blog-card-meta">
+								<span class="author">
+									By: <a href="/News/News">Cooperate Affairs Dept.</a>
+								</span><!-- author -->
+								@* <span class="comment">
+									<a href="news-details.html">02 Comments</a>
+								</span> *@<!-- comment -->
+							</div><!-- blog-card-meta -->
+							<h4><a href="/News/News">@item.ShortSubject</a></h4>
 							<p>@item.ShortSummary</p>
 						</div><!-- blog-card-content -->
 					</div><!-- blog-card -->
@@ -734,6 +744,7 @@
 					</div>
 				
 		</div><!--event-section-inner-->
+		</div>
 	</div><!--container-->
 </section>
 <!--Executives-->
