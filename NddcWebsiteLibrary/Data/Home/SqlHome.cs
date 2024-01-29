@@ -43,5 +43,22 @@ namespace NddcWebsiteLibrary.Data.Home
         {
             return db.LoadData<MyUpdateModel, dynamic>("select top 1 Id, Title, DescriptionImage from Updates Where UpdateCategory = @UpdateCategory Order By Id DESC", new { UpdateCategory = updateCategory }, connectionStringName, false).SingleOrDefault();
         }
+
+        public List<MyVideoModel> DisplayVideos()
+        {
+            return db.LoadData<MyVideoModel, dynamic>("Select Top 5 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).ToList();
+        }
+        public List<MyVideoModel> DisplayMainVideo()
+        {
+            return db.LoadData<MyVideoModel, dynamic>("Select Top 1 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).ToList();
+        }
+        public List<MyTenderModel> ViewAllTenders()
+        {
+            return db.LoadData<MyTenderModel, dynamic>("Select Id, Titel, Category, DocumentUrl, AdvertDate, DeadlioneDate From Tenders Order By Id DESC", new { }, connectionStringName, false).ToList();
+        }
+        public List<MyTenderModel> ViewTenderDetails(int Id)
+        {
+            return db.LoadData<MyTenderModel, dynamic>("Select Id, Titel, Category, DocumentUrl, AdvertDate, DeadlioneDate From Tenders Where Id = @Id Order By Id DESC", new { Id }, connectionStringName, false).ToList();
+        }
     }
 }
