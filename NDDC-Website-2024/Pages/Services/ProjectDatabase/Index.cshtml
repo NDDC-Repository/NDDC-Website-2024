@@ -1,0 +1,96 @@
+﻿@page
+@model NDDC_Website_2024.Pages.Services.ProjectDatabase.IndexModel
+@{
+}
+
+<section class="page-banner">
+    <div class="container">
+        <div class="page-banner-title pb-4">
+            <h1 class="text-white text-center">Discover Our Projects</h1>
+        </div><!-- page-banner-title -->
+        <form class="row g-0 text-white bg-white py-4 text-center justify-content-center align-items-center">
+            <div class="col-auto bg-light">
+                <label for="staticEmail2" class="visually-hidden">Name</label>
+                <input type="text" class="form-control bg-light" id="staticEmail2" placeholder="Enter Project Name">
+            </div>
+            <div class="col-auto bg-light">
+                <select class="form-control form-select bg-light" aria-label="Location" id="location">
+                        <option selected>Choose Location</option>
+                        <option value="1">NDDC Ongoing Project</option>
+                        <option value="2">NDDC Abandoned Project</option>
+                        <option value="3">Poor Project Quality</option>
+                        <option value="4">Incompetent Contractor</option>
+                        <option value="5">NDDC Employee</option>
+                        <option value="6">NDDC Program</option>
+                        <option value="7">Other</option>
+                    </select>
+            </div>
+            <div class="col-auto bg-light">
+                <select class="form-control form-select bg-light" aria-label="Project Type" id="location">
+                        <option selected>Choose Project Type</option>
+                        <option value="1">NDDC Ongoing Project</option>
+                        <option value="2">NDDC Abandoned Project</option>
+                        <option value="3">Poor Project Quality</option>
+                        <option value="4">Incompetent Contractor</option>
+                        <option value="5">NDDC Employee</option>
+                        <option value="6">NDDC Program</option>
+                        <option value="7">Other</option>
+                    </select>
+            </div>
+            <div class="col-auto  pt-3 pt-lg-0">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </form>
+
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+        <div>
+            <canvas id="myChart2"></canvas>
+        </div>
+
+    </div><!-- container -->
+</section>
+
+<script type="text/javascript">
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    }); 
+    const myChart2 = document.getElementById('myChart2');
+
+    new Chart(myChart2, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
