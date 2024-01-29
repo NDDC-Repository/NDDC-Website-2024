@@ -1698,6 +1698,9 @@ a.search-toggler{
 	bottom: 0;
 	}
 }
+.height {
+	height: 40vh;
+}
 .department-details-policy span{
 	font-size: 18px;
 	font-weight: 800;
@@ -2485,6 +2488,43 @@ a.search-toggler{
 .service-one-card-content h4 >a:hover{
 	color: var(--thm-primary);
 }
+
+.service-one {
+	padding: 40px 50px;
+	position: relative;
+	background-color: var(--thm-white);
+	box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+	z-index: 9;
+}
+
+@media(max-width: 991px) {
+	.service-one {
+		margin-bottom: 20px;
+	}
+}
+
+.service-one:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 500ms ease;
+	box-shadow: 0 0 0px 0px var(--thm-primary);
+	z-index: -1;
+}
+
+.service-one:hover:before {
+	box-shadow: 0 0 0px 2px var(--thm-primary);
+}
+
+
+.service-one:hover h4 > a {
+	color: var(--thm-primary);
+}
+
+
 .service-two-section{
 	position: relative;
 	padding: 120px 0;
