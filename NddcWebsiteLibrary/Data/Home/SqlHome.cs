@@ -46,11 +46,11 @@ namespace NddcWebsiteLibrary.Data.Home
 
         public List<MyVideoModel> DisplayVideos()
         {
-            return db.LoadData<MyVideoModel, dynamic>("Select Top 5 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).ToList();
+            return db.LoadData<MyVideoModel, dynamic>("Select Top 4 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).ToList();
         }
-        public List<MyVideoModel> DisplayMainVideo()
+        public MyVideoModel DisplayMainVideo()
         {
-            return db.LoadData<MyVideoModel, dynamic>("Select Top 1 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).ToList();
+            return db.LoadData<MyVideoModel, dynamic>("Select Top 1 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).FirstOrDefault();
         }
         public List<MyTenderModel> ViewAllTenders()
         {

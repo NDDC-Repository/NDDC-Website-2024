@@ -5,7 +5,7 @@ namespace NddcWebsiteLibrary.Data.Home
     public interface IHomeData
     {
         List<MyNewsModel> AllNews();
-        List<MyVideoModel> DisplayMainVideo();
+        MyVideoModel DisplayMainVideo();
         List<MyPhotoSpeakModel> DisplayPhotos();
         List<MyNewsModel> DisplaySlides();
         List<MyVideoModel> DisplayVideos();

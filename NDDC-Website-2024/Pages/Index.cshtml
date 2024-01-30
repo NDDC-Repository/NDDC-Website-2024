@@ -1172,40 +1172,28 @@
 		<div class="row">
 			<div class="col-lg-5 order-1">
 				<div class="">
+					@foreach (var item in Model.Videos)
+					{
+						@if (@item.YoutubeUrl != Model.MainVideo.YoutubeUrl)
+						{
+							<div class="row mb-2 align-items-center">
+								<div class="col-12 col-md-6 pe-0">
+									<iframe width="300" height="100" src="https://www.youtube.com/embed/@item.YoutubeUrl;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="img-fluid "></iframe>
+								</div><!-- sidebar-recent-donations-img -->
+								<div class="sidebar-widget p-3 mb-0 col-12 col-md-6 ms-0">
+									<div class="sidebar-widget-organizer-name justify-content-between d-flex">
+										<a href="#" class="">@item.VideoTitle</a><span style=""></span>
+									</div><!-- sidebar-widget-organizer-name -->
+									<p class="mb-0">@item.VideoDesc</p>
+								</div><!-- sidebar-recent-donations-content -->
+							</div>
+						}
+						
 
-					<div class="row mb-2 align-items-center">
-						<div class="col-12 col-md-6 pe-0">
-							<iframe width="300" height="100" src="https://www.youtube.com/embed/6plvkizQOv4?modestbranding=1&amp;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="img-fluid "></iframe>
-						</div><!-- sidebar-recent-donations-img -->
-						<div class="sidebar-widget p-3 mb-0 col-12 col-md-6 ms-0">
-							<div class="sidebar-widget-organizer-name justify-content-between d-flex">
-								<a href="#" class="">NDDC</a><span style="">3 hours ago</span>
-							</div><!-- sidebar-widget-organizer-name -->
-							<p class="mb-0">NDDC Inaugurates Aquaculture Training Centre in Abia</p>
-						</div><!-- sidebar-recent-donations-content -->
-					</div><!-- sidebar-recent-donations -->
-					<div class="row mb-2 align-items-center">
-						<div class="col-12 col-md-6 pe-0">
-							<iframe width="300" height="100" src="https://www.youtube.com/embed/6plvkizQOv4?modestbranding=1&amp;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="img-fluid "></iframe>
-						</div><!-- sidebar-recent-donations-img -->
-						<div class="sidebar-widget p-3 mb-0 col-12 col-md-6 ms-0">
-							<div class="sidebar-widget-organizer-name justify-content-between d-flex">
-								<a href="#" class="">NDDC</a><span style="">3 hours ago</span>
-							</div><!-- sidebar-widget-organizer-name -->
-							<p class="mb-0">NDDC Inaugurates Aquaculture Training Centre in Abia</p>
-						</div><!-- sidebar-recent-donations-content -->
-					</div><!-- sidebar-recent-donations -->
-					<div class="row mb-2 align-items-center">
-						<div class="col-12 col-md-6 pe-0">
-							<iframe width="300" height="100" src="https://www.youtube.com/embed/6plvkizQOv4?modestbranding=1&amp;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="img-fluid "></iframe>
-						</div><!-- sidebar-recent-donations-img -->
-						<div class="sidebar-widget p-3 mb-0 col-12 col-md-6 ms-0">
-							<div class="sidebar-widget-organizer-name justify-content-between d-flex">
-								<a href="#" class="">NDDC</a><span style="">3 hours ago</span>
-							</div><!-- sidebar-widget-organizer-name -->
-							<p class="mb-0">NDDC Inaugurates Aquaculture Training Centre in Abia</p>
-						</div><!-- sidebar-recent-donations-content -->
-					</div><!-- sidebar-recent-donations -->
+						<!-- sidebar-recent-donations -->
+					}	
+					
+					
 
 				</div>
 			</div>
@@ -1214,7 +1202,7 @@
 					<div class="">
 						<div>
 							<div class="portfolio-card">
-								<iframe class="mw-100 mayor-img" width="800" height="480" src="https://www.youtube.com/embed/6plvkizQOv4?modestbranding=1&amp;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+								<iframe class="mw-100 mayor-img" width="800" height="480" src="https://www.youtube.com/embed/@Model.MainVideo.YoutubeUrl;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
 							</div>
 						</div>
 					</div><!--mayor-img-->
