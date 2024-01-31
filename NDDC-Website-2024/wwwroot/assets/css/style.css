@@ -1576,6 +1576,51 @@ a.search-toggler{
 .department-two-img-icon:hover i{
 	color: var(--thm-primary);
 }
+.department-two-card-icon i{
+	height: 100px;
+	width: 100px;
+	background-color: var(--thm-primary);
+	color: var(--thm-white);
+	line-height: 100px;
+	text-align: center;
+	font-size: 50px;
+	border-radius: 50%;
+}
+
+
+.department-two-textbox {
+	height: 160px;
+	width: 180px;
+	text-align: center;
+	background-color: var(--thm-black);
+	border-radius: 5%;
+	border-top-left-radius: 50% !important;
+	border-top-right-radius: 50% !important;
+	color: var(--thm-white);
+}
+	.department-two-textbox:hover {
+		background-color: var( --thm-primary);
+		color: var(--thm-black);
+	}
+	.department-two-textbox h5{
+		color: var(--thm-white);
+	}
+		.department-two-textbox h5:hover {
+			color: var(--thm-black);
+		}
+	.department-two-textbox i {
+		color: var(--thm-primary);
+		font-size: 50px;
+		display: flex;
+		justify-content: center;
+		padding-top: 1rem !important;
+	}
+	.department-two-textbox:hover i {
+		color: var(--thm-black);
+	}
+
+
+
 .department-two-content{
 	padding: 14px 50px 43px 50px;
 }
@@ -2471,6 +2516,8 @@ a.search-toggler{
 .service-one-card:hover h4>a{
 	color: var(--thm-primary);
 }
+
+
 .service-one-icon{
 	padding-bottom: 17px;
 }
