@@ -1169,23 +1169,23 @@
 			<div class="section-tagline">Videos of Activities from the Region</div>
 			<h2 class="section-title">Videos </h2>
 		</div>
-		<div class="row">
-			<div class="col-lg-5 order-1">
+		<div class="row container">
+			<div class="col-lg-3 order-1">
 				<div class="">
 					@foreach (var item in Model.Videos)
 					{
 						@if (@item.YoutubeUrl != Model.MainVideo.YoutubeUrl)
 						{
 							<div class="row mb-2 align-items-center">
-								<div class="col-12 col-md-6 pe-0">
+								<div class="col-12 pe-0">
 									<iframe width="300" height="100" src="https://www.youtube.com/embed/@item.YoutubeUrl;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="img-fluid "></iframe>
 								</div><!-- sidebar-recent-donations-img -->
-								<div class="sidebar-widget p-3 mb-0 col-12 col-md-6 ms-0">
+								@* <div class="sidebar-widget p-3 mb-0 col-12 col-md-6 ms-0">
 									<div class="sidebar-widget-organizer-name justify-content-between d-flex">
 										<a href="#" class="">@item.VideoTitle</a><span style=""></span>
 									</div><!-- sidebar-widget-organizer-name -->
-									<p class="mb-0">@item.VideoDesc</p>
-								</div><!-- sidebar-recent-donations-content -->
+										<p class="mb-0">@item.VideoDesc</p>
+								</div><!-- sidebar-recent-donations-content --> *@
 							</div>
 						}
 						
@@ -1197,12 +1197,12 @@
 
 				</div>
 			</div>
-			<div class="col-lg-7">
+			<div class="col-lg-9">
 				<div class="">
 					<div class="">
 						<div>
 							<div class="portfolio-card">
-								<iframe class="mw-100 mayor-img" width="800" height="480" src="https://www.youtube.com/embed/@Model.MainVideo.YoutubeUrl;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+								<iframe class="mw-100 mayor-img" width="1000" height="480" src="https://www.youtube.com/embed/@Model.MainVideo.YoutubeUrl;rel=0&amp;cc_load_policy=1&amp;color=white" title="NDDC Inaugurates Aquaculture Training Centre in Abia, Advances SDGs on Poverty Eradication." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
 							</div>
 						</div>
 					</div><!--mayor-img-->
@@ -1224,7 +1224,7 @@
 				<p>You can send us a report on the performance of NDDC Projects in your community to give us direct performance reports on our project.</p>
 			</div><!-- cta-five-content -->
 			<div class="cta-five-button">
-				<a href="/Services/IReports/index" class="btn btn-primary  align-items-center justify-content-center">Send <i class="fa-solid fa-info rounded p-2 mx-2 bg-success"></i> Report</a>
+				<a href="/Services/IReports/index" class="btn btn-primary d-xxl-flex">Send <i class="fa-solid fa-info rounded p-2 mx-2 bg-success"></i> Report</a>
 			</div><!-- cta-five-button -->
 			<div class="cta-five-img">
 				<i class="flaticon-file"></i>
