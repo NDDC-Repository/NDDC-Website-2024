@@ -3638,7 +3638,7 @@ a.search-toggler{
 .cta-four-widget-socials a + a {
 	margin-left: 10px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 899px) {
 	.cta-section .cotainer{
 		max-width: 1200px;
 	}	
@@ -3652,7 +3652,7 @@ a.search-toggler{
 	overflow: hidden;
 	position: relative;
 }
-@media (max-width: 1399px) {
+@media (max-width: 899px) {
 	.cta-five-card {
 		display: block;
 		text-align: center;	
@@ -3673,7 +3673,7 @@ a.search-toggler{
 	justify-content: center;
 	margin-right: 50px;
 }
-@media (max-width: 1399px) {
+@media (max-width: 899px) {
 	.cta-five-card-icon {
 		margin: 0 auto;
 		margin-bottom: 35px;
@@ -3693,7 +3693,7 @@ a.search-toggler{
 	font-size: 65px;
 	color: var(--thm-white);
 }
-@media (max-width: 1399px) {
+@media (max-width: 899px) {
 	.cta-five-content {
 		margin-bottom: 30px
 	}
