@@ -3009,7 +3009,7 @@ a.search-toggler{
 	background-color: var(--thm-black);
 	background-size: cover;
 	padding-top: 122px;
-	padding-bottom: 122px;
+	padding-bottom: 200px;
 	background-position-y: center;
 }
 .page-breadcrumbs ul {
