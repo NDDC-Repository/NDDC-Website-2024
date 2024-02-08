@@ -4521,6 +4521,16 @@ border-radius: 100px;
 	transition: all 500ms ease;
 	background-color: var(--thm-primary);
 }
+.team-card-bottom {
+	position: absolute;
+	content: '';
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	height: 4px;
+	width: 100%;
+	background-color: var(--thm-primary);
+}
 .team-card:hover:after{
 	transform: scaleY(1);
 }
