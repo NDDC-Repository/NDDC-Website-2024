@@ -109,8 +109,31 @@
 <section class="department-details-section p-0">
     <div class="container">
         <div class="row  d-flex align-items-center justify-content-center">
-            <div class="col-md-10">
-                <div id="chart"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <div id="chart"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div id="chart3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -625,13 +648,13 @@
     var options = {
         series: [{
             name: 'Net Profit',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+            data: [44, 55, 57, 56, 61]
         }, {
             name: 'Revenue',
-            data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+            data: [76, 85, 101, 98, 87]
         }, {
             name: 'Free Cash Flow',
-            data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+            data: [35, 41, 36, 26, 45]
         }],
         chart: {
             type: 'bar',
@@ -653,7 +676,7 @@
             colors: ['transparent']
         },
         xaxis: {
-            categories: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008'],
+            categories: ['2000', '2001', '2002', '2003', '2004'],
         },
         yaxis: {
             title: {
@@ -681,32 +704,24 @@
             {
                 data: [
                     {
-                        x: '2008',
+                        x: '2000',
                         y: [2800, 4500]
                     },
                     {
-                        x: '2009',
+                        x: '2001',
                         y: [3200, 4100]
                     },
                     {
-                        x: '2010',
+                        x: '2002',
                         y: [2950, 7800]
                     },
                     {
-                        x: '2011',
+                        x: '2003',
                         y: [3000, 4600]
                     },
                     {
-                        x: '2012',
+                        x: '2004',
                         y: [3500, 4100]
-                    },
-                    {
-                        x: '2013',
-                        y: [4500, 6500]
-                    },
-                    {
-                        x: '2014',
-                        y: [4100, 5600]
                     }
                 ]
             }
@@ -760,6 +775,30 @@
 
     var chart = new ApexCharts(document.querySelector("#chart-2"), options);
     chart.render();
+    
+
+    var options = {
+        series: [44, 55, 41, 17, 15],
+        chart: {
+            type: 'donut',
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    width: 200
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }]
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart3"), options);
+    chart.render();
+
+
 
 
 
