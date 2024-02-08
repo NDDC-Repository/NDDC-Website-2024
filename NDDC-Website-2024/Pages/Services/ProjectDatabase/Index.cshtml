@@ -192,7 +192,7 @@
    @*  has context menu *@
 </section>
 
-<section class="department-details-section bg-dark">
+<section class="department-details-section bg-dark bg-state">
     <div class="container">
         <div class="section-title-box text-center">
             <h2 class="fw-semi-bold text-white text-center mb-0">Projects By State </h2>
@@ -724,83 +724,37 @@
     chart.render();
 
 
+
     var options = {
-        series: [
-            {
-                data: [
-                    {
-                        x: '2000',
-                        y: [2800, 4500]
-                    },
-                    {
-                        x: '2001',
-                        y: [3200, 4100]
-                    },
-                    {
-                        x: '2002',
-                        y: [2950, 7800]
-                    },
-                    {
-                        x: '2003',
-                        y: [3000, 4600]
-                    },
-                    {
-                        x: '2004',
-                        y: [3500, 4100]
-                    }
-                ]
-            }
-        ],
+        series: [{
+            data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+        }],
         chart: {
-            height: 350,
-            type: 'rangeBar',
-            zoom: {
-                enabled: false
-            }
+            type: 'bar',
+            height: 350
         },
         plotOptions: {
             bar: {
-                isDumbbell: true,
-                columnWidth: 3,
-                dumbbellColors: [['#008FFB', '#00E396']]
+                borderRadius: 4,
+                horizontal: true,
             }
         },
-        legend: {
-            show: true,
-            showForSingleSeries: true,
-            position: 'top',
-            horizontalAlign: 'left',
-            customLegendItems: ['Product A', 'Product B']
-        },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                type: 'vertical',
-                gradientToColors: ['#00E396'],
-                inverseColors: true,
-                stops: [0, 100]
-            }
-        },
-        grid: {
-            xaxis: {
-                lines: {
-                    show: true
-                }
-            },
-            yaxis: {
-                lines: {
-                    show: false
-                }
-            }
+        dataLabels: {
+            enabled: false
         },
         xaxis: {
-            tickPlacement: 'on'
+            categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
+                'United States', 'China', 'Germany'
+            ],
         }
     };
 
-    var chart = new ApexCharts(document.querySelector("#chart-2"), options);
+    var chart = new ApexCharts(document.querySelector("#chart2"), options);
     chart.render();
-    
+
+
+
+
 
     var options = {
         series: [44, 55, 41, 17, 15],

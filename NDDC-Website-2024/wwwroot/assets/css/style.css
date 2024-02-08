@@ -1678,6 +1678,10 @@ a.search-toggler{
 	padding-top: 120px;
 	padding-bottom: 120px;
 }
+
+.bg-state {
+	background-image: url(../image/bg/vision.png);
+}
 @media(max-width: 1199px){
 	.department-details-section{
 		padding: 70px 0px;
