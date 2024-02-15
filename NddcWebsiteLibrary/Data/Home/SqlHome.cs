@@ -60,5 +60,19 @@ namespace NddcWebsiteLibrary.Data.Home
         {
             return db.LoadData<MyTenderModel, dynamic>("Select Id, Titel, Category, DocumentUrl, AdvertDate, DeadlioneDate From Tenders Where Id = @Id Order By Id DESC", new { Id }, connectionStringName, false).ToList();
         }
-    }
+		public MyNewsModel GetBreakingNews()
+		{
+			DateTime publishDate = db.LoadData<DateTime, dynamic>("select top 1 PublishDate from News Where DisplayFormat = 'Breaking' Order By NID DESC", new { }, connectionStringName, false).SingleOrDefault();
+
+            DateTime endDate = publishDate.AddDays(3);
+            DateTime currDate = DateTime.Now;
+
+			if (currDate < endDate)
+			{
+				return db.LoadData<MyNewsModel, dynamic>("Select Top 1 NID, Subject from News Where DisplayFormat = 'Breaking' Order By NID DESC", new { }, connectionStringName, false).SingleOrDefault();
+			}
+
+			return null;
+		}
+	}
 }

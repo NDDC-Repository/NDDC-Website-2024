@@ -10,26 +10,30 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Announcements</h1>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<div class="card" style="border: 0;">
-					<div class="card-body">
-						<h5 class="card-title">NDDC Signs Performance Bond, To Facilitate Regional Master Plan</h5>
-                        <p class="card-text">The Niger Delta Development Commission, NDDC, has signed a Performance Bond with the Ministry of Niger Delta Development as part of its commitment to achieving the objectives of President Bola Tinubu administration’s Renewed Hope Agenda.</p>
-						<p>Minister of the Niger Delta Development, Engr. Abubakar Momoh, supervised the signing ceremony during a two-day NDDC Board and Management Retreat at the Four Points by Sheraton Hotel, Ikot Ekpene, Akwa Ibom State.</p>
-						<a href="#" class="text-success pt-3">Learn more</a>
+@if (Model.ShowModal)
+{
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5 text-success" id="exampleModalLabel">Public Announcement</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="card" style="border: 0;">
+						<div class="card-body">
+							<h5 class="card-title">NDDC Signs Performance Bond, To Facilitate Regional Master Plan</h5>
+							<p class="card-text">The Niger Delta Development Commission, NDDC, has signed a Performance Bond with the Ministry of Niger Delta Development as part of its commitment to achieving the objectives of President Bola Tinubu administration’s Renewed Hope Agenda.</p>
+							<p>Minister of the Niger Delta Development, Engr. Abubakar Momoh, supervised the signing ceremony during a two-day NDDC Board and Management Retreat at the Four Points by Sheraton Hotel, Ikot Ekpene, Akwa Ibom State.</p>
+							<a href="#" class="text-success pt-3">Learn more</a>
+						</div>
 					</div>
-				</div> 
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+}
+
 <!--Slider Section-->
 <section class="main-slider">
 	<div class="main-slider-swiper owl-carousel owl-theme owl-loaded owl-drag">

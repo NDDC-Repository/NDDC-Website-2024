@@ -17,6 +17,7 @@ namespace NDDC_Website_2024.Pages
         public MyUpdateModel PartnershipsPhoto { get; set; }
         public MyVideoModel MainVideo { get; set; }
         public List<MyVideoModel> Videos { get; set; }
+        public bool ShowModal { get; set; }
 
         public IndexModel(IHomeData homeDb, IConfiguration configuration)
         {
@@ -34,6 +35,7 @@ namespace NDDC_Website_2024.Pages
             PartnershipsPhoto = homeDb.GetImageByUpdateCategory("Partnerships");
             MainVideo = homeDb.DisplayMainVideo();
             Videos = homeDb.DisplayVideos();
+            ShowModal = true;
         }
     }
 }
