@@ -7562,3 +7562,8 @@ label {
 	margin-bottom: 20px;
 	font-size: 30px;
 }
+
+.values {
+	height: 190px;
+	font-size: 1rem !important;
+}
