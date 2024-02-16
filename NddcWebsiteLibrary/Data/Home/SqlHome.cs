@@ -74,5 +74,18 @@ namespace NddcWebsiteLibrary.Data.Home
 
 			return null;
 		}
+        public MyAnnouncementModel GetAnnouncement()
+        {
+            DateTime endDate = db.LoadData<DateTime, dynamic>("select top 1 EndDate from Announcements Order By Id DESC", new { }, connectionStringName, false).SingleOrDefault();
+
+            DateTime currDate = DateTime.Now;
+
+            if (currDate <= endDate)
+            {
+                return db.LoadData<MyAnnouncementModel, dynamic>("Select Top 1 Id, Title, Details from Announcements Order By Id DESC", new { }, connectionStringName, false).SingleOrDefault();
+            }
+
+            return null;
+        }
 	}
 }
