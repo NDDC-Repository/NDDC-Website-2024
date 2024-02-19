@@ -1,4 +1,6 @@
 ﻿@page
+@using System.Web
+@using System.Text.RegularExpressions
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -9,6 +11,13 @@
 	Launch modal
 </button>
 
+@{
+	// Function to strip HTML tags from a string
+	string StripHtml(string input)
+	{
+		return Regex.Replace(input, "<.*?>", string.Empty);
+	}
+}
 <!-- Modal -->
 @if (Model.Announcement != null)
 {
@@ -23,7 +32,7 @@
 					<div class="card" style="border: 0;">
 						<div class="card-body">
 							<h5 class="card-title">@Model.Announcement.Title</h5>
-							<p class="card-text">@Model.Announcement.Details</p>
+							<p class="card-text">@StripHtml(Model.Announcement.Details)</p>
 							<a href="#" class="text-success pt-3">Learn more</a>
 						</div>
 					</div>
