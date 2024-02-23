@@ -5780,6 +5780,16 @@ border-radius: 100px;
     font-weight: bold;
     font-size: 12px;
 }
+.news-details-meta-box-inner .image{
+	color: var(--thm-primary);
+	margin-left: 3px;
+}
+	.news-details-meta-box-inner .image:before {
+		content: "\f11b";
+		font-family: "Font Awesome 6 Free";
+		font-weight: bold;
+		font-size: 12px;
+	}
 .news-details-meta-box-inner span a{
     color: var(--thm-gray);
     margin-left: 3px;
