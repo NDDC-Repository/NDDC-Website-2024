@@ -3915,13 +3915,13 @@ a.search-toggler{
 		padding-bottom: 40px;		
 	}	
 }
-.footer-widget-logo{
+.footer-widget-logo {
 	padding: 35px 35px;
 	max-width: 250px;
 	align-items: center;
 	color: var(--thm-white);
 	display: inline-block;
-	background-color: #fff;
+	background-color: var(--thm-dark-black);
 }
 .footer-widget-text {
 	margin-top: 32px;
