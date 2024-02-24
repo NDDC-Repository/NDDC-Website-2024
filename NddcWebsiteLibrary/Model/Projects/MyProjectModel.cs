@@ -22,5 +22,6 @@ namespace NddcWebsiteLibrary.Model.Projects
         public string Location { get; set; }
         public string Category { get; set; }
         public string Contractor { get; set; }
+        public string CatName { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 using NddcWebsiteLibrary.Data.Home;
+using NddcWebsiteLibrary.Data.Projects;
 using NddcWebsiteLibrary.Databases;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddTransient<IHomeData, SqlHome>();
+builder.Services.AddTransient<IProjectsData, SqlProjects>();
 
 var app = builder.Build();
 

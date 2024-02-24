@@ -5,15 +5,28 @@ namespace NddcWebsiteLibrary.Data.Home
     public interface IHomeData
     {
         List<MyNewsModel> AllNews();
-        MyVideoModel DisplayMainVideo();
+		List<MyVideoModel> DisplayAllVideos();
+		MyVideoModel DisplayMainVideo();
         List<MyPhotoSpeakModel> DisplayPhotos();
         List<MyNewsModel> DisplaySlides();
-        List<MyVideoModel> DisplayVideos();
+		List<MyUpdateModel> DisplayUpdateSlidesForProgram();
+		List<MyUpdateModel> DisplayUpdateSlidesForProjects();
+		List<MyVideoModel> DisplayVideos();
         MyAnnouncementModel GetAnnouncement();
         MyNewsModel GetBreakingNews();
 		MyUpdateModel? GetImageByUpdateCategory(string updateCategory);
-        List<MyNewsModel> ListHomePageNews();
-        List<MyTenderModel> ViewAllTenders();
-        List<MyTenderModel> ViewTenderDetails(int Id);
+		MyNewsModel GetLatestNews();
+		MyNewsModel GetNewsDetails(int nid);
+		List<MyNewsModel> GetNewsPhotoGallery(int newsId);
+		List<MyUpdateModel> GetUpdatesListForProgram();
+		List<MyUpdateModel> GetUpdatesListForProject();
+		List<MyNewsModel> ListHomePageNews();
+		List<MyAnnouncementModel> ViewAllAnnoncements();
+		List<MyPublicationsModel> ViewAllPublications();
+		List<MySightsAndIconModel> ViewAllSightsAndIcons();
+		List<MyTenderModel> ViewAllTenders();
+		MyAnnouncementModel ViewAnnouncementDetails(int id);
+		MySightsAndIconModel ViewSightsAndIconDetails(int id);
+		MyTenderModel ViewTenderDetails(int Id);
     }
 }

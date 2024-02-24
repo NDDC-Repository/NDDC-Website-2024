@@ -1,4 +1,5 @@
-﻿using NddcWebsiteLibrary.Databases;
+﻿
+using NddcWebsiteLibrary.Databases;
 using NddcWebsiteLibrary.Model.Home;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace NddcWebsiteLibrary.Data.Home
             this.db = db;
         }
 
+        //News
         public List<MyNewsModel> DisplaySlides()
         {
             return db.LoadData<MyNewsModel, dynamic>("Select Top 5 NID, Subject, Summary, ImageUrl From News Order By NID DESC", new { }, connectionStringName, false).ToList();
@@ -31,35 +33,75 @@ namespace NddcWebsiteLibrary.Data.Home
             //list all items in home page
             return db.LoadData<MyNewsModel, dynamic>("select top 3 ROW_NUMBER() OVER (ORDER BY NID DESC) As SrNo, NID, Subject, Summary, ImageUrl, PublishDate, ExpiryDate, Views, Clicks, Type, SetAsSlide from News Order By NID DESC", new { }, connectionStringName, false).ToList();
         }
+        public MyNewsModel GetNewsDetails(int nid)
+        {
+          
+            return db.LoadData<MyNewsModel, dynamic>("Select NID, Subject, Summary, Details, ImageUrl, PublishDate, ExpiryDate, Type from News Where NID = @NID Order By NID DESC", new { NID = nid }, connectionStringName, false).FirstOrDefault();
+        }
+		public List<MyNewsModel> GetNewsPhotoGallery(int newsId)
+		{
+			//list all items in home page
+			return db.LoadData<MyNewsModel, dynamic>("Select ImageUrl from NewsPhotoGallery Where NewsId = @NewsId Order By Id DESC", new { NewsId = newsId }, connectionStringName, false).ToList();
+		}
+		public MyNewsModel GetLatestNews()
+		{
 
-        //Photo Speak Methods
+			return db.LoadData<MyNewsModel, dynamic>("Select Top 1 NID, Subject from News Order By NID DESC", new { }, connectionStringName, false).FirstOrDefault();
+		}
 
-        public List<MyPhotoSpeakModel> DisplayPhotos()
+		//Photo Speak Methods
+		public List<MyPhotoSpeakModel> DisplayPhotos()
         {
             return db.LoadData<MyPhotoSpeakModel, dynamic>("Select Top 40 Id, Title, Location, ImageUrl From PhotoSPeak Order By Id DESC", new { }, connectionStringName, false).ToList();
         }
 
+        //Updates
         public MyUpdateModel GetImageByUpdateCategory(string updateCategory)
         {
             return db.LoadData<MyUpdateModel, dynamic>("select top 1 Id, Title, DescriptionImage from Updates Where UpdateCategory = @UpdateCategory Order By Id DESC", new { UpdateCategory = updateCategory }, connectionStringName, false).SingleOrDefault();
         }
+		public List<MyUpdateModel> DisplayUpdateSlidesForProjects()
+		{
+			return db.LoadData<MyUpdateModel, dynamic>("Select Top 5 Id, Title, DescriptionImage, Location From Updates Where ProjectProgramType = Project Order By Id DESC", new { }, connectionStringName, false).ToList();
+		}
+		public List<MyUpdateModel> DisplayUpdateSlidesForProgram()
+		{
+			return db.LoadData<MyUpdateModel, dynamic>("Select Top 5 Id, Title, DescriptionImage, Location From Updates Where ProjectProgramType = Program Order By Id DESC", new { }, connectionStringName, false).ToList();
+		}
+		public List<MyUpdateModel> GetUpdatesListForProject()
+		{
+			return db.LoadData<MyUpdateModel, dynamic>("Select Top 5 Id, ProjectProgramType, Title, DescriptionImage, Location From Updates Where ProjectProgramType = Project Order By Id DESC", new { }, connectionStringName, false).ToList();
+		}
+		public List<MyUpdateModel> GetUpdatesListForProgram()
+		{
+			return db.LoadData<MyUpdateModel, dynamic>("Select Top 5 Id, ProjectProgramType, Title, DescriptionImage, Location From Updates Where ProjectProgramType = Program Order By Id DESC", new { }, connectionStringName, false).ToList();
+		}
 
-        public List<MyVideoModel> DisplayVideos()
+		//Videos
+		public List<MyVideoModel> DisplayVideos()
         {
             return db.LoadData<MyVideoModel, dynamic>("Select Top 4 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).ToList();
         }
-        public MyVideoModel DisplayMainVideo()
+		public List<MyVideoModel> DisplayAllVideos()
+		{
+			return db.LoadData<MyVideoModel, dynamic>("Select Top 40 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).ToList();
+		}
+		public MyVideoModel DisplayMainVideo()
         {
             return db.LoadData<MyVideoModel, dynamic>("Select Top 1 Id, VideoTitle, VideoDesc, YoutubeUrl From Videos Order By Id DESC", new { }, connectionStringName, false).FirstOrDefault();
         }
+
+        //Tenders
         public List<MyTenderModel> ViewAllTenders()
         {
             return db.LoadData<MyTenderModel, dynamic>("Select Id, Titel, Category, DocumentUrl, AdvertDate, DeadlioneDate From Tenders Order By Id DESC", new { }, connectionStringName, false).ToList();
         }
-        public List<MyTenderModel> ViewTenderDetails(int Id)
+        public MyTenderModel ViewTenderDetails(int id)
         {
-            return db.LoadData<MyTenderModel, dynamic>("Select Id, Titel, Category, DocumentUrl, AdvertDate, DeadlioneDate From Tenders Where Id = @Id Order By Id DESC", new { Id }, connectionStringName, false).ToList();
+            return db.LoadData<MyTenderModel, dynamic>("Select Id, Titel, Category, DocumentUrl, AdvertDate, DeadlioneDate From Tenders Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
         }
+
+        //Breaking News
 		public MyNewsModel GetBreakingNews()
 		{
 			DateTime publishDate = db.LoadData<DateTime, dynamic>("select top 1 PublishDate from News Where DisplayFormat = 'Breaking' Order By NID DESC", new { }, connectionStringName, false).SingleOrDefault();
@@ -74,6 +116,8 @@ namespace NddcWebsiteLibrary.Data.Home
 
 			return null;
 		}
+
+        //Announcement
         public MyAnnouncementModel GetAnnouncement()
         {
             DateTime endDate = db.LoadData<DateTime, dynamic>("select top 1 EndDate from Announcements Order By Id DESC", new { }, connectionStringName, false).SingleOrDefault();
@@ -87,5 +131,30 @@ namespace NddcWebsiteLibrary.Data.Home
 
             return null;
         }
+		public List<MyAnnouncementModel> ViewAllAnnoncements()
+		{
+			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Titel, StartDate, Deatils From Announcements Order By Id DESC", new { }, connectionStringName, false).ToList();
+		}
+		public MyAnnouncementModel ViewAnnouncementDetails(int id)
+		{
+			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Titel, StartDate, Deatils From Announcements Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
+		}
+
+		//Publication
+		public List<MyPublicationsModel> ViewAllPublications()
+		{
+			return db.LoadData<MyPublicationsModel, dynamic>("Select PubId, PubTitle, PubUploadUrl From Publications Order By PubId DESC", new { }, connectionStringName, false).ToList();
+		}
+
+		//SightsAndIcons
+		public List<MySightsAndIconModel> ViewAllSightsAndIcons()
+		{
+			return db.LoadData<MySightsAndIconModel, dynamic>("Select Id, Title, Summary, ImageUrl From SightsAndIcons Order By Id DESC", new { }, connectionStringName, false).ToList();
+		}
+		public MySightsAndIconModel ViewSightsAndIconDetails(int id)
+		{
+			return db.LoadData<MySightsAndIconModel, dynamic>("Select Id, Title, Summary, ImageUrl From SightsAndIcons Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
+		}
+
 	}
 }

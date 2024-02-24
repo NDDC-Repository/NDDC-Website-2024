@@ -1,4 +1,6 @@
-﻿@page
+﻿@page "{nid:int?}"
+@using System.Web
+@using System.Text.RegularExpressions
 @model NDDC_Website_2024.Pages.News.NewsDetailsModel
 @{
 }
@@ -43,11 +45,11 @@
 			<div class="col-lg-8">
 				<div class="news-details-box-image">
 					<div class="news-details-box-image-inner">
-						<img src="/assets/image/blog/modal-1.png" class="img-fluid" alt="img-193">
-						<a href="news-details.html" class="news-details-box-date">28 SEP</a>
+						<img src="@Model._containerUrl@Model.NewsDetails.ImageUrl" class="img-fluid" alt="img-193">
+						<a href="news-details.html" class="news-details-box-date">@Model.NewsDetails.PublishDate.ToString("dd - MMM")</a>
 					</div><!-- news-details-box-image-inner -->
 				</div><!-- news-details-box-image -->
-				<div class="news-details-meta-box d-flex justify-content-between">
+				@* <div class="news-details-meta-box d-flex justify-content-between">
 					<div class="news-details-meta-box-inner">
 						<span class="author">
 							by<a href="news-details.html">Admin</a>
@@ -61,69 +63,32 @@
 							<a href="/News/NewsPhotoGallery">View Photo Gallery</a>
 						</span><!-- comment -->
 					</div><!-- news-details-meta-box-inner -->
-				</div><!-- news-details-meta-box -->
+				</div> *@<!-- news-details-meta-box -->
+				<br />
+				
 				<div class="news-details-content-box">
-					<h4>Supporting local business to bounce back</h4>
-					<p>Tliq is notm hendr erit a augue insu image pellen tes que id erat quis sollicitud. Lorem ipsum dolor sit amet, consectetur adipiscing ullam blandit hendrerit faucibus suspendisse. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum ley of type and scrambled it to make a type specimen book.</p>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including version.</p>
+					<h4>@Model.NewsDetails.Subject</h4>
+					<div>
+						@Html.Raw(Model.NewsDetails.Details)
+					</div>
+					
+					
                 </div><!-- /.news-details-content-box -->
-				<h3>Leave a Comment</h3>
+				<br />
+				<h3>Photo Gallery</h3>
 				<div class="row row-gutter-30">
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
+					@foreach (var item in Model.PhotoGallery)
+					{
+						<div class="col-lg-4 col-md-4">
+							<div class="portfolio-card">
+								<img src="@Model._containerUrl@item.ImageUrl" class="img-fluid" alt="img-97" height="557" width="500">
 
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
+							</div><!--portfolio-card-->
+						</div>
 
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
-
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
-
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
-
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
-
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
-
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
-
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
-					<div class="col-lg-4 col-md-4">
-						<div class="portfolio-card">
-							<img src="/assets/image/portfolio/portfolio-7.png" class="img-fluid" alt="img-97">
-
-						</div><!--portfolio-card-->
-					</div><!-- col-lg-4 col-md-4 -->
+						<!-- col-lg-4 col-md-4 -->
+					}
+					
 				</div><!-- row -->
 			</div><!-- col-lg-8 -->
 
