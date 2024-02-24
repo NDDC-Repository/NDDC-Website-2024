@@ -1,14 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace NDDC_Website_2024.Pages
+namespace NDDC_Website_2024.Pages.News
 {
-    public class NewsModel : PageModel
+    public class NewsPhotoGalleryModel : PageModel
     {
-        public NewsModel()
-        {
-
-        }
         public void OnGet()
         {
         }
