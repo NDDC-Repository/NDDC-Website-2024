@@ -133,11 +133,11 @@ namespace NddcWebsiteLibrary.Data.Home
         }
 		public List<MyAnnouncementModel> ViewAllAnnoncements()
 		{
-			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Titel, StartDate, Deatils From Announcements Order By Id DESC", new { }, connectionStringName, false).ToList();
+			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Title, StartDate, Details From Announcements Order By Id DESC", new { }, connectionStringName, false).ToList();
 		}
 		public MyAnnouncementModel ViewAnnouncementDetails(int id)
 		{
-			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Titel, StartDate, Deatils From Announcements Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
+			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Title, StartDate, Details From Announcements Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
 		}
 
 		//Publication

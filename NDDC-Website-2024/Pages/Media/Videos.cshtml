@@ -24,79 +24,17 @@
 			<h2 class="section-title">Check Out Our Latest Videos</h2>
 		</div>
 			<div class="row row-gutter-30">
+				@foreach (var item in Model.Videos)
+                    {
 				<div class="col-lg-4 col-md-4">
 					<div class="portfolio-card">
 						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
+						src="https://www.youtube.com/embed/@item.YoutubeUrl"title="@item.VideoTitle" allowfullscreen>
 						</iframe>
-						
+
 					</div><!--portfolio-card-->
 				</div><!-- col-lg-4 col-md-4 -->
-				<div class="col-lg-4 col-md-4">
-					<div class="portfolio-card">
-						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
-						</iframe>
-						
-					</div><!--portfolio-card-->
-				</div><!-- col-lg-4 col-md-4 -->
-				<div class="col-lg-4 col-md-4">
-					<div class="portfolio-card">
-						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
-						</iframe>
-						
-					</div><!--portfolio-card-->
-				</div><!-- col-lg-4 col-md-4 -->
-				<div class="col-lg-4 col-md-4">
-					<div class="portfolio-card">
-						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
-						</iframe>
-						
-					</div><!--portfolio-card-->
-				</div><!-- col-lg-4 col-md-4 -->
-				<div class="col-lg-4 col-md-4">
-					<div class="portfolio-card">
-						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
-						</iframe>
-						
-					</div><!--portfolio-card-->
-				</div><!-- col-lg-4 col-md-4 -->
-				<div class="col-lg-4 col-md-4">
-					<div class="portfolio-card">
-						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
-						</iframe>
-						
-					</div><!--portfolio-card-->
-				</div><!-- col-lg-4 col-md-4 -->
-				<div class="col-lg-4 col-md-4">
-					<div class="portfolio-card">
-						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
-						</iframe>
-						
-					</div><!--portfolio-card-->
-				</div><!-- col-lg-4 col-md-4 -->
-				<div class="col-lg-4 col-md-4">
-					<div class="portfolio-card">
-						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
-						</iframe>
-						
-					</div><!--portfolio-card-->
-				</div><!-- col-lg-4 col-md-4 -->
-				
-				<div class="col-lg-4 col-md-4">
-					<div class="portfolio-card">
-						<iframe width="372" height="351"
-						src="https://www.youtube.com/embed/6plvkizQOv4">
-						</iframe>
-						
-					</div><!--portfolio-card-->
-				</div><!-- col-lg-4 col-md-4 -->
+					}
 			</div><!-- row -->
 			<div class="row">
 				<div class="col-lg-12">
