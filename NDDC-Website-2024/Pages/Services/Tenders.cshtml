@@ -33,96 +33,24 @@
         <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
                 <div class="row row-gutter-30">
+					@foreach (var item in Model.Tenders)
+            {
                     <div class="">
                         <div class="service-three-card">
                             <div class="service-three-icon">
                                 <i class="flaticon-pdf"></i>
                             </div><!-- service-three-icon -->
                             <div class="service-three-card-content">
-                                <h3><a href="documentation-details.html">Professional Tax Document</a></h3>
-                                <p>When nothing prevents our being able to we like best every.</p>
+								<h3><a href="documentation-details.html">@item.Title</a></h3>
+                                <p>@item.Category</p>
                                 <div class="service-three-detail">
-                                    <a href="documentation-details.html"><span>Read More</span><i class="fa-solid fa-arrow-right-long"></i></a>
+                                    <a href="@item.DocumentUrl"><span>Read More</span><i class="fa-solid fa-arrow-right-long"></i></a>
                                     <i class="flaticon-pdf"></i>
                                 </div><!-- service-three-detail -->
                             </div><!-- service-three-card-content -->
                         </div><!-- service-three-card -->
                     </div><!--  -->
-                    <div class="">
-                        <div class="service-three-card">
-                            <div class="service-three-icon">
-                                <i class="flaticon-pdf"></i>
-                            </div><!-- service-three-icon -->
-                            <div class="service-three-card-content">
-                                <h3><a href="documentation-details.html">Online Job Acticity</a></h3>
-                                <p>When nothing prevents our being able to we like best every.</p>
-                                <div class="service-three-detail">
-                                    <a href="documentation-details.html"><span>Read More</span><i class="fa-solid fa-arrow-right-long"></i></a>
-                                    <i class="flaticon-pdf"></i>
-                                </div><!-- service-three-detail -->
-                            </div><!-- service-three-card-content -->
-                        </div><!-- service-three-card -->
-                    </div><!--  -->
-                    <div class="">
-                        <div class="service-three-card">
-                            <div class="service-three-icon">
-                                <i class="flaticon-pdf"></i>
-                            </div><!-- service-three-icon -->
-                            <div class="service-three-card-content">
-                                <h3><a href="documentation-details.html">Garbage Management</a></h3>
-                                <p>When nothing prevents our being able to we like best every.</p>
-                                <div class="service-three-detail">
-                                    <a href="documentation-details.html"><span>Read More</span><i class="fa-solid fa-arrow-right-long"></i></a>
-                                    <i class="flaticon-pdf"></i>
-                                </div><!-- service-three-detail -->
-                            </div><!-- service-three-card-content -->
-                        </div><!-- service-three-card -->
-                    </div><!--  -->
-                    <div class="">
-                        <div class="service-three-card">
-                            <div class="service-three-icon">
-                                <i class="flaticon-pdf"></i>
-                            </div><!-- service-three-icon -->
-                            <div class="service-three-card-content">
-                                <h3><a href="documentation-details.html">Water Management</a></h3>
-                                <p>When nothing prevents our being able to we like best every.</p>
-                                <div class="service-three-detail">
-                                    <a href="documentation-details.html"><span>Read More</span><i class="fa-solid fa-arrow-right-long"></i></a>
-                                    <i class="flaticon-pdf"></i>
-                                </div><!-- service-three-detail -->
-                            </div><!-- service-three-card-content -->
-                        </div><!-- service-three-card -->
-                    </div><!--  -->
-                    <div class="">
-                        <div class="service-three-card">
-                            <div class="service-three-icon">
-                                <i class="flaticon-pdf"></i>
-                            </div><!-- service-three-icon -->
-                            <div class="service-three-card-content">
-                                <h3><a href="documentation-details.html">Green Garden Development</a></h3>
-                                <p>When nothing prevents our being able to we like best every.</p>
-                                <div class="service-three-detail">
-                                    <a href="documentation-details.html"><span>Read More</span><i class="fa-solid fa-arrow-right-long"></i></a>
-                                    <i class="flaticon-pdf"></i>
-                                </div><!-- service-three-detail -->
-                            </div><!-- service-three-card-content -->
-                        </div><!-- service-three-card -->
-                    </div><!--  -->
-                    <div class="">
-                        <div class="service-three-card">
-                            <div class="service-three-icon">
-                                <i class="flaticon-pdf"></i>
-                            </div><!-- service-three-icon -->
-                            <div class="service-three-card-content">
-                                <h3><a href="documentation-details.html">Town Hall Booking</a></h3>
-                                <p>When nothing prevents our being able to we like best every.</p>
-                                <div class="service-three-detail">
-                                    <a href="documentation-details.html"><span>Read More</span><i class="fa-solid fa-arrow-right-long"></i></a>
-                                    <i class="flaticon-pdf"></i>
-                                </div><!-- service-three-detail -->
-                            </div><!-- service-three-card-content -->
-                        </div><!-- service-three-card -->
-                    </div><!--  -->
+					}
                 </div><!-- row -->
             </div><!-- tab-pane -->
             <div class="tab-pane fade" id="pills-tenders" role="tabpanel" aria-labelledby="pills-tenders-tab">
