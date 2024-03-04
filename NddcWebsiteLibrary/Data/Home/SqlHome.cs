@@ -94,11 +94,11 @@ namespace NddcWebsiteLibrary.Data.Home
         //Tenders
         public List<MyTenderModel> ViewAllTenders()
         {
-            return db.LoadData<MyTenderModel, dynamic>("Select Id, Titel, Category, DocumentUrl, AdvertDate, DeadlioneDate From Tenders Order By Id DESC", new { }, connectionStringName, false).ToList();
+            return db.LoadData<MyTenderModel, dynamic>("Select Id, Title, Category, DocumentUrl, AdvertDate, DeadlineDate From Tenders Order By Id DESC", new { }, connectionStringName, false).ToList();
         }
         public MyTenderModel ViewTenderDetails(int id)
         {
-            return db.LoadData<MyTenderModel, dynamic>("Select Id, Titel, Category, DocumentUrl, AdvertDate, DeadlioneDate From Tenders Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
+            return db.LoadData<MyTenderModel, dynamic>("Select Id, Title, Category, DocumentUrl, AdvertDate, DeadlineDate From Tenders Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
         }
 
         //Breaking News
@@ -133,11 +133,11 @@ namespace NddcWebsiteLibrary.Data.Home
         }
 		public List<MyAnnouncementModel> ViewAllAnnoncements()
 		{
-			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Titel, StartDate, Deatils From Announcements Order By Id DESC", new { }, connectionStringName, false).ToList();
+			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Title, StartDate, Details From Announcements Order By Id DESC", new { }, connectionStringName, false).ToList();
 		}
 		public MyAnnouncementModel ViewAnnouncementDetails(int id)
 		{
-			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Titel, StartDate, Deatils From Announcements Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
+			return db.LoadData<MyAnnouncementModel, dynamic>("Select Id, Title, StartDate, Details From Announcements Where Id = @Id Order By Id DESC", new { Id = id }, connectionStringName, false).FirstOrDefault();
 		}
 
 		//Publication
