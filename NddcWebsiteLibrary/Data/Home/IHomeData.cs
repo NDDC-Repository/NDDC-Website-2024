@@ -14,7 +14,8 @@ namespace NddcWebsiteLibrary.Data.Home
 		List<MyVideoModel> DisplayVideos();
         MyAnnouncementModel GetAnnouncement();
         MyNewsModel GetBreakingNews();
-		MyUpdateModel? GetImageByUpdateCategory(string updateCategory);
+        MyNewsModel GetCriticalNewsUpdate();
+        MyUpdateModel? GetImageByUpdateCategory(string updateCategory);
 		MyNewsModel GetLatestNews();
 		MyNewsModel GetNewsDetails(int nid);
 		List<MyNewsModel> GetNewsPhotoGallery(int newsId);

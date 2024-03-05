@@ -117,6 +117,22 @@ namespace NddcWebsiteLibrary.Data.Home
 			return null;
 		}
 
+        //Critical News Update
+        public MyNewsModel GetCriticalNewsUpdate()
+        {
+            DateTime publishDate = db.LoadData<DateTime, dynamic>("select top 1 PublishDate from News Where DisplayFormat = 'Critical' Order By NID DESC", new { }, connectionStringName, false).SingleOrDefault();
+
+            DateTime endDate = publishDate.AddDays(3);
+            DateTime currDate = DateTime.Now;
+
+            if (currDate < endDate)
+            {
+                return db.LoadData<MyNewsModel, dynamic>("Select Top 1 NID, Subject, ImageUrl from News Where DisplayFormat = 'Critical' Order By NID DESC", new { }, connectionStringName, false).SingleOrDefault();
+            }
+
+            return null;
+        }
+
         //Announcement
         public MyAnnouncementModel GetAnnouncement()
         {

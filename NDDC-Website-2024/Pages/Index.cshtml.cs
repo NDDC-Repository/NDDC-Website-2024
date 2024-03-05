@@ -18,6 +18,7 @@ namespace NDDC_Website_2024.Pages
         public MyVideoModel MainVideo { get; set; }
         public List<MyVideoModel> Videos { get; set; }
         public MyAnnouncementModel Announcement { get; set; }
+        public MyNewsModel CriticalUpdate { get; set; }
 
         public IndexModel(IHomeData homeDb, IConfiguration configuration)
         {
@@ -36,6 +37,7 @@ namespace NDDC_Website_2024.Pages
             MainVideo = homeDb.DisplayMainVideo();
             Videos = homeDb.DisplayVideos();
             Announcement = homeDb.GetAnnouncement();
+            CriticalUpdate = homeDb.GetCriticalNewsUpdate();
         }
     }
 }
