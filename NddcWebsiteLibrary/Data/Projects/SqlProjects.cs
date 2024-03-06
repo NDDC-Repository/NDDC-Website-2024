@@ -40,6 +40,67 @@ namespace NddcWebsiteLibrary.Data.Projects
         {
             return db.LoadData<MyProjectCategoryModel, dynamic>("SELECT PCID, CatName From ProjectCategory", new { }, connectionStringName, false).ToList();
         }
+		public List<MyProjectModel> GetProjectsAdhocAsync(string projectName, int sid, int pcid)
+		{
+
+			//MyPayRollListModel reportModel;
+			List<MyProjectModel> Projects = new List<MyProjectModel>();
+			//List<Task<decimal>> tasks = new List<Task<decimal>>();
+
+			bool toggle = false;
+			string glSchema = "";
+
+			if (projectName != "")
+			{
+				if (toggle == true)
+				{
+					glSchema = $"Projects.ProjectName Like %{projectName}%";
+				}
+				else
+				{
+					glSchema = $"Where Projects.ProjectName Like %{projectName}%";
+					toggle = true;
+				}
+			}
+
+			if (sid != 0)
+			{
+				if (toggle == true)
+				{
+					glSchema = $"{glSchema} And Projects.SID = '{sid}'";
+				}
+				else
+				{
+					glSchema = $"Where Projects.SID = '{sid}'";
+					toggle = true;
+				}
+			}
+			if (pcid != 0)
+			{
+				if (toggle == true)
+				{
+					glSchema = $"{glSchema} And Projects.PCID = '{pcid}'";
+				}
+				else
+				{
+					glSchema = $"Where Projects.PCID = '{pcid}'";
+					toggle = true;
+				}
+			}
+			
+			string SQL = "SELECT ROW_NUMBER() OVER (ORDER BY Employees.Id DESC) As SrNo, Employees.Id, Employees.BasicSalary, Employees.EmployeeCode, Employees.FirstName, Employees.Gender, Employees.SecretarialAllow, Employees.CooperativeDed, Employees.VoluntaryPension, Employees.BankCode, Employees.AccountNumber, Banks.BankName, Employees.EntertainmentAllow, Employees.NewspaperAllow, Employees.Arreas, " +
+				"Employees.LastName, Employees.Email, Employees.Category, (TransportAllow) As TransportAllowance, (HousingAllow) As HousingAllowance, (FurnitureAllow) As FurnitureAllowance, (MealAllow) As MealAllowance, (UtilityAllow) As UtilityAllowance, " +
+				"(EducationAllow) As EducationAllowance, (DomesticServantAllow) As DomesticServantAllowance, (DriverAllow) As DriversAllowance, (VehicleAllow) As VehicleMaintenanceAllowance, (HazardAllow) As HazardAllowance, (Tax) As TaxDeduction, (NHF) As NHFDeduction, (JSA) As JSADeduction, (SSA) As SSADeduction, TotalEarnings, TotalDeductions, " +
+				"NetPay, (Pension) As PensionDeduction, (MedicalAllow) As MedicalAllowance, (SecurityAllow) As SecurityAllowance, GradeLevel.GradeLevel, Departments.DepartmentName, Employees.EntertainmentAllow, Employees.NewspaperAllow, Employees.LeaveAllow FROM Employees LEFT JOIN GradeLevel ON Employees.GradeLevelId = " +
+				"GradeLevel.Id LEFT JOIN Departments ON Employees.DepartmentId = Departments.Id LEFT JOIN JobTitles ON Employees.JobTitleId = " +
+				$"JobTitles.Id LEFT JOIN Banks On Employees.BankCode = Banks.Code {glSchema} ORDER BY Employees.Id DESC";
+
+			string SQL2 = $"SELECT Projects.PID, Projects.ProjectName, ProjectLocation.Location, ProjectCategory.CatName FROM  Projects INNER JOIN ProjectCategory ON Projects.PCID = ProjectCategory.PCID LEFT OUTER JOIN ProjectLocation ON Projects.LID = ProjectLocation.PLID {glSchema} ORDER BY Projects.PID DESC";
+
+			Projects = db.LoadData<MyProjectModel, dynamic>(SQL2, new { }, connectionStringName, false).ToList();
+
+			return Projects;
+		}
 
 
 
@@ -52,5 +113,5 @@ namespace NddcWebsiteLibrary.Data.Projects
 
 
 
-    }
+	}
 }

@@ -14,7 +14,10 @@ namespace NDDC_Website_2024.Pages.Services.ProjectDatabase
         public MyStateModel State { get; set; }
         public List<MyProjectCategoryModel> ProjectCategories { get; set; }
         public MyProjectCategoryModel ProjectCategory { get; set; }
-       
+        [BindProperty]
+        public MyProjectModel Project { get; set; }
+
+
         [BindProperty(SupportsGet = true) ]
         public string SearchTerm { get; set; }
 
@@ -28,6 +31,10 @@ namespace NDDC_Website_2024.Pages.Services.ProjectDatabase
             RoadsCount = projDb.CountRoadProjects();
             States = projDb.GetStates();
             ProjectCategories = projDb.GetProjectCategories();
+        }
+        public async Task<IActionResult> OnPost()
+        {
+            return RedirectToPage("SearchResults", new { projName = Project.ProjectName, sid = Project.SID, pcid = Project.PCID });
         }
     }
 }

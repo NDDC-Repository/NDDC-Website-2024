@@ -9,10 +9,10 @@
             <h1 class="text-white mb-3 lh-sm text-center">Discover Our Projects</h1>
         </div><!-- page-banner-title -->
         <div class="container col-lg-10 col-xxl-12">
-            <form class="row g-0 text-white mb-3 lh-sm bg-white py-4 text-center justify-content-center align-items-center">
+            <form class="row g-0 text-white mb-3 lh-sm bg-white py-4 text-center justify-content-center align-items-center" method="post">
                 <div class="col-auto col-md-4 col-lg-5 bg-light">
                     <label for="staticEmail2" class="visually-hidden">Name</label>
-                    <input type="text" class="form-control bg-light" id="staticEmail2" placeholder="Enter Project Name">
+                    <input type="text" asp-for="@Model.Project.ProjectName" class="form-control bg-light" id="staticEmail2" placeholder="Enter Project Name">
                 </div>
                 <div class="col-auto col-md-3 bg-light">
                     @* <select class="form-control form-select bg-light" aria-label="Location" id="location">
@@ -25,7 +25,7 @@
                         <option value="6">NDDC Program</option>
                         <option value="7">Other</option>
                     </select> *@
-                    <select class="form-control form-select bg-light" asp-for="@Model.State.SID" asp-items="@(new SelectList(Model.States, "SID", "StateName"))">
+                    <select class="form-control form-select bg-light" asp-for="@Model.Project.SID" asp-items="@(new SelectList(Model.States, "SID", "StateName"))">
                         <option value="0">Select State</option>
                     </select>
                 </div>
@@ -40,7 +40,7 @@
                         <option value="6">NDDC Program</option>
                         <option value="7">Other</option>
                     </select> *@
-                    <select class="form-control form-select bg-light" asp-for="@Model.ProjectCategory.PCID" asp-items="@(new SelectList(Model.ProjectCategories, "PCID", "CatName"))">
+                    <select class="form-control form-select bg-light" asp-for="@Model.Project.PCID" asp-items="@(new SelectList(Model.ProjectCategories, "PCID", "CatName"))">
                         <option value="0">Select Category</option>
                     </select>
                 </div>

@@ -7,7 +7,8 @@ namespace NddcWebsiteLibrary.Data.Projects
 		int CountRoadProjects();
 		List<MyProjectModel> GetLatestProjects();
         List<MyProjectCategoryModel> GetProjectCategories();
-        List<MyStateModel> GetStates();
+		List<MyProjectModel> GetProjectsAdhocAsync(string projectName, int sid, int pcid);
+		List<MyStateModel> GetStates();
         List<MyProjectModel> ViewRoadsAndBridgesProjects();
 	}
 }
