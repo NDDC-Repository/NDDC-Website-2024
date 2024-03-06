@@ -2125,6 +2125,32 @@ a.search-toggler{
 	margin-left: -120px;
 	top: 70px;
 }
+
+.imageHolderDiv img {
+	filter: saturate(0%);
+	width: 15%;
+	border: 1px solid limegreen;
+	height: 50rem;
+	object-fit: cover;
+	border-radius: 12px;
+	transition: all ease 0.4s;
+	cursor: pointer;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+	.imageHolderDiv img:hover {
+		filter: saturate(80%);
+		width: 37%;
+	}
+
+.imageHolder {
+	/*width: 300px;
+	height: 50px;*/
+	border: 2px solid black;
+	border-radius: 12px;
+	background-color: blueviolet;
+}
 .about-caption-image {
 	position: absolute;
 	padding: 10px;
