@@ -47,6 +47,40 @@
                     </div>
                 </form>
             </div>
+            <section class="justify-content-center d-flex">
+                <div class="container m-5">
+                    <div class="overflow-hidden bg-white shadow-md rounded-lg">
+                        <div class="border-bottom border-gray-200">
+                            <h2 class="text-lg fw-semi-bold text-gray-900 py-4 mb-0">Latest Projects</h2>
+                        </div>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-start text-xs fw-medium text-gray-500 uppercase">Project Title</th>
+                                    <th scope="col" class="text-start text-xs fw-medium text-gray-500 uppercase">Location</th>
+                                    <th scope="col" class="text-start text-xs fw-medium text-gray-500 uppercase">Category</th>
+                                    <th scope="col" class="text-start text-xs fw-medium text-gray-500 uppercase"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Projects)
+                                {
+                                    <!-- Repeat this tr for each project -->
+                                    <tr>
+                                        <td class="px-6 py-4">@item.ProjectName</td>
+                                        <td class="px-6 py-4">@item.Location</td>
+                                        <td class="px-6 py-4">@item.CatName</td>
+                                        <td class="px-6 py-4"><a asp-page="StateDetails">View</a></td>
+                                    </tr>
+                                    <!-- ... other projects ... -->
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                @*  has context menu *@
+            </section>
         </div>
     </div>
 </section>

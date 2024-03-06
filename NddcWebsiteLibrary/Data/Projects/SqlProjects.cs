@@ -54,11 +54,11 @@ namespace NddcWebsiteLibrary.Data.Projects
 			{
 				if (toggle == true)
 				{
-					glSchema = $"Projects.ProjectName Like %{projectName}%";
+					glSchema = $"Projects.ProjectName Like '%{projectName}%'";
 				}
 				else
 				{
-					glSchema = $"Where Projects.ProjectName Like %{projectName}%";
+					glSchema = $"Where Projects.ProjectName Like '%{projectName}%'";
 					toggle = true;
 				}
 			}
@@ -67,11 +67,11 @@ namespace NddcWebsiteLibrary.Data.Projects
 			{
 				if (toggle == true)
 				{
-					glSchema = $"{glSchema} And Projects.SID = '{sid}'";
+					glSchema = $"{glSchema} And Projects.SID = {sid}";
 				}
 				else
 				{
-					glSchema = $"Where Projects.SID = '{sid}'";
+					glSchema = $"Where Projects.SID = {sid}";
 					toggle = true;
 				}
 			}
@@ -79,11 +79,11 @@ namespace NddcWebsiteLibrary.Data.Projects
 			{
 				if (toggle == true)
 				{
-					glSchema = $"{glSchema} And Projects.PCID = '{pcid}'";
+					glSchema = $"{glSchema} And Projects.PCID = {pcid}";
 				}
 				else
 				{
-					glSchema = $"Where Projects.PCID = '{pcid}'";
+					glSchema = $"Where Projects.PCID = {pcid}";
 					toggle = true;
 				}
 			}
@@ -95,7 +95,7 @@ namespace NddcWebsiteLibrary.Data.Projects
 				"GradeLevel.Id LEFT JOIN Departments ON Employees.DepartmentId = Departments.Id LEFT JOIN JobTitles ON Employees.JobTitleId = " +
 				$"JobTitles.Id LEFT JOIN Banks On Employees.BankCode = Banks.Code {glSchema} ORDER BY Employees.Id DESC";
 
-			string SQL2 = $"SELECT Projects.PID, Projects.ProjectName, ProjectLocation.Location, ProjectCategory.CatName FROM  Projects INNER JOIN ProjectCategory ON Projects.PCID = ProjectCategory.PCID LEFT OUTER JOIN ProjectLocation ON Projects.LID = ProjectLocation.PLID {glSchema} ORDER BY Projects.PID DESC";
+			string SQL2 = $"SELECT Top 50 Projects.PID, Projects.ProjectName, ProjectLocation.Location, ProjectCategory.CatName FROM  Projects INNER JOIN ProjectCategory ON Projects.PCID = ProjectCategory.PCID LEFT OUTER JOIN ProjectLocation ON Projects.LID = ProjectLocation.PLID {glSchema} ORDER BY Projects.PID DESC";
 
 			Projects = db.LoadData<MyProjectModel, dynamic>(SQL2, new { }, connectionStringName, false).ToList();
 
