@@ -71,14 +71,14 @@
 				<div class="owl-stage">
 					<div class="owl-item" style="width: 2260px;">
 						<div class="item">
-							<div class="item-slider-bg" style="background-image: url(assets/image/bg/slider-bg-1.png)"></div>
+							<div class="item-slider-bg" style="background-image: url(@Model._containerUrl@Model.CriticalUpdate.ImageUrl)"></div>
 							<div class="container">
 								<div class="row">
 									<div class="col-12 col-md-12 col-lg-12">
 										<div class="slider-content-two text-center">
-											<div class="slider-tagline-two">City Goverment Online Services</div>
-											<h1 class="section-title">Good Governance <br> Part of the Democracy</h1>
-											<a href="index-2.html" class="btn btn-primary">Discover More</a>
+											<div class="slider-tagline-two">Critical News Update</div>
+											<h1 class="section-title">Good Governance <br> @Model.CriticalUpdate.Subject</h1>
+											<a asp-page="/News/NewsDetails" asp-route-Id="@Model.CriticalUpdate.Id" class="btn btn-primary">Discover More</a>
 										</div><!-- slider-content-two -->
 									</div><!-- col-12 col-md-12 col-lg-12 -->
 								</div><!-- row -->
@@ -149,7 +149,7 @@
 		</div><!-- container -->
 	</section>
 
-	<section class="about-two-section">
+	@* <section class="about-two-section">
 		<div class="container">
 			<div class="row justify-content-between row-gutter-y-60">
 				<div class="col-lg-12 col-xl-6 col-xxl-6">
@@ -212,7 +212,7 @@
 				</div><!-- col-lg-12 col-xl-6 col-xxl-6 -->
 			</div><!-- row -->
 		</div><!-- container -->
-	</section>
+	</section> *@
 	<!--Prominent News Section End-->
 }
 else

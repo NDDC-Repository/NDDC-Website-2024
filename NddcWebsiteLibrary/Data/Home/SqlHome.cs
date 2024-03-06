@@ -125,7 +125,7 @@ namespace NddcWebsiteLibrary.Data.Home
             DateTime endDate = publishDate.AddDays(3);
             DateTime currDate = DateTime.Now;
 
-            if (currDate < endDate)
+            if (currDate <= endDate)
             {
                 return db.LoadData<MyNewsModel, dynamic>("Select Top 1 NID, Subject, ImageUrl from News Where DisplayFormat = 'Critical' Order By NID DESC", new { }, connectionStringName, false).SingleOrDefault();
             }
