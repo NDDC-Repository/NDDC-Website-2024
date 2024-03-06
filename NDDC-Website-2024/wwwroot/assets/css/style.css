@@ -2130,7 +2130,7 @@ a.search-toggler{
 	filter: saturate(0%);
 	width: 15%;
 	border: 1px solid limegreen;
-	height: 50rem;
+	height: 40rem;
 	object-fit: cover;
 	border-radius: 12px;
 	transition: all ease 0.4s;

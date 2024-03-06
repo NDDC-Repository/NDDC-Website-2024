@@ -1,0 +1,52 @@
+﻿@page
+@model NDDC_Website_2024.Pages.Services.ProjectDatabase.SearchResultsModel
+@{
+}
+<section class="blog-section">
+    <div class="container">
+        <div class="blog-box lh-lg container col-lg-10">
+            <h1 class="section-title fs-4">Search Results</h1>
+            <div class="">
+                <form class="row g-0 text-white mb-3 lh-sm bg-white py-4 text-center align-items-center">
+                    <div class="col-auto col-md-4 col-lg-5 bg-light">
+                        <label for="staticEmail2" class="visually-hidden">Name</label>
+                        <input type="text" class="form-control bg-light" id="staticEmail2" placeholder="Enter Project Name">
+                    </div>
+                    <div class="col-auto col-md-3 bg-light">
+                        @* <select class="form-control form-select bg-light" aria-label="Location" id="location">
+                        <option selected>Choose State</option>
+                        <option value="1">NDDC Ongoing Project</option>
+                        <option value="2">NDDC Abandoned Project</option>
+                        <option value="3">Poor Project Quality</option>
+                        <option value="4">Incompetent Contractor</option>
+                        <option value="5">NDDC Employee</option>
+                        <option value="6">NDDC Program</option>
+                        <option value="7">Other</option>
+                        </select> *@
+                        <select class="form-control form-select bg-light" @* asp-for="@Model.State.SID" asp-items="@(new SelectList(Model.States, "SID", "StateName"))" *@>
+                            <option value="0">Select State</option>
+                        </select>
+                    </div>
+                    <div class="col-auto col-md-4 col-lg-3 bg-light">
+                        @* <select class="form-control form-select bg-light" aria-label="Project Type" id="location">
+                        <option selected>Choose Project Type</option>
+                        <option value="1">NDDC Ongoing Project</option>
+                        <option value="2">NDDC Abandoned Project</option>
+                        <option value="3">Poor Project Quality</option>
+                        <option value="4">Incompetent Contractor</option>
+                        <option value="5">NDDC Employee</option>
+                        <option value="6">NDDC Program</option>
+                        <option value="7">Other</option>
+                        </select> *@
+                        <select class="form-control form-select bg-light" @* asp-for="@Model.ProjectCategory.PCID" asp-items="@(new SelectList(Model.ProjectCategories, "PCID", "CatName"))" *@>
+                            <option value="0">Select Category</option>
+                        </select>
+                    </div>
+                    <div class="col-auto pt-lg-0">
+                        <button type="submit" class="btn btn-primary px-2"><i class="flaticon-search-interface-symbol"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
