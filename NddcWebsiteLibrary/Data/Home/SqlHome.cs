@@ -62,11 +62,11 @@ namespace NddcWebsiteLibrary.Data.Home
         }
 		public List<MyUpdateModel> DisplayUpdateSlidesForProjects()
 		{
-			return db.LoadData<MyUpdateModel, dynamic>("Select Top 5 Id, Title, DescriptionImage, Location From Updates Where ProjectProgramType = Project Order By Id DESC", new { }, connectionStringName, false).ToList();
+			return db.LoadData<MyUpdateModel, dynamic>("Select Top 3 Id, Title, DescriptionImage, Location From Updates Where UpdateType = 'Project' Order By Id DESC", new { }, connectionStringName, false).ToList();
 		}
 		public List<MyUpdateModel> DisplayUpdateSlidesForProgram()
 		{
-			return db.LoadData<MyUpdateModel, dynamic>("Select Top 5 Id, Title, DescriptionImage, Location From Updates Where ProjectProgramType = Program Order By Id DESC", new { }, connectionStringName, false).ToList();
+			return db.LoadData<MyUpdateModel, dynamic>("Select Top 3 Id, Title, DescriptionImage, Location From Updates Where UpdateType = 'Program' Order By Id DESC", new { }, connectionStringName, false).ToList();
 		}
 		public List<MyUpdateModel> GetUpdatesListForProject()
 		{
