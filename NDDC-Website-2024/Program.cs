@@ -1,4 +1,6 @@
+using NddcWebsiteLibrary.Data.CloudStorage;
 using NddcWebsiteLibrary.Data.Home;
+using NddcWebsiteLibrary.Data.IReport;
 using NddcWebsiteLibrary.Data.Projects;
 using NddcWebsiteLibrary.Databases;
 
@@ -9,6 +11,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddTransient<IHomeData, SqlHome>();
 builder.Services.AddTransient<IProjectsData, SqlProjects>();
+builder.Services.AddTransient<IReportData, SqlIReport>();
+builder.Services.AddTransient<ICloudStorage, AWSCloudStorage>();
 
 var app = builder.Build();
 

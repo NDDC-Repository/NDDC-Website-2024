@@ -13,6 +13,7 @@ namespace NddcWebsiteLibrary.Model.IReport
         public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+        public string State { get; set; }
         public string Location { get; set; }
         public string VideoUrl { get; set; }
         public DateTime DateAdded { get; set; }
