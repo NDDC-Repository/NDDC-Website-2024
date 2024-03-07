@@ -48,8 +48,8 @@
                 </form>
             </div>
             <section class="justify-content-center d-flex">
-                <div class="container m-5">
-                    <div class="overflow-hidden bg-white shadow-md rounded-lg">
+                <div class="container m-0 p-0">
+                   <div class="overflow-hidden bg-white shadow-md rounded-lg">
                         <div class="border-bottom border-gray-200">
                             <h2 class="text-lg fw-semi-bold text-gray-900 py-4 mb-0">Latest Projects</h2>
                         </div>
@@ -63,7 +63,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var item in Model.Projects)
+                                @* @foreach (var item in Model.Projects)
                                 {
                                     <!-- Repeat this tr for each project -->
                                     <tr>
@@ -73,7 +73,7 @@
                                         <td class="px-6 py-4"><a asp-page="StateDetails">View</a></td>
                                     </tr>
                                     <!-- ... other projects ... -->
-                                }
+                                } *@
 
                             </tbody>
                         </table>
