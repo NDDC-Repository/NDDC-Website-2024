@@ -8,6 +8,7 @@ namespace NddcWebsiteLibrary.Model.Projects
 {
     public class MyProjectModel
     {
+        public int SrNo { get; set; }
         public int PID { get; set; }
         public string ProjectName { get; set; }
         public int SID { get; set; }
@@ -17,7 +18,7 @@ namespace NddcWebsiteLibrary.Model.Projects
         public DateTime StartDate { get; set; }
         public int CID { get; set; }
         public string Status { get; set; }
-        public string State { get; set; }
+        public string StateName { get; set; }
         public string LGA { get; set; }
         public string Location { get; set; }
         public string Category { get; set; }

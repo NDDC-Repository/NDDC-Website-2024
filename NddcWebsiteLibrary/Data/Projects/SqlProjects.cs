@@ -87,15 +87,8 @@ namespace NddcWebsiteLibrary.Data.Projects
 					toggle = true;
 				}
 			}
-			
-			string SQL = "SELECT ROW_NUMBER() OVER (ORDER BY Employees.Id DESC) As SrNo, Employees.Id, Employees.BasicSalary, Employees.EmployeeCode, Employees.FirstName, Employees.Gender, Employees.SecretarialAllow, Employees.CooperativeDed, Employees.VoluntaryPension, Employees.BankCode, Employees.AccountNumber, Banks.BankName, Employees.EntertainmentAllow, Employees.NewspaperAllow, Employees.Arreas, " +
-				"Employees.LastName, Employees.Email, Employees.Category, (TransportAllow) As TransportAllowance, (HousingAllow) As HousingAllowance, (FurnitureAllow) As FurnitureAllowance, (MealAllow) As MealAllowance, (UtilityAllow) As UtilityAllowance, " +
-				"(EducationAllow) As EducationAllowance, (DomesticServantAllow) As DomesticServantAllowance, (DriverAllow) As DriversAllowance, (VehicleAllow) As VehicleMaintenanceAllowance, (HazardAllow) As HazardAllowance, (Tax) As TaxDeduction, (NHF) As NHFDeduction, (JSA) As JSADeduction, (SSA) As SSADeduction, TotalEarnings, TotalDeductions, " +
-				"NetPay, (Pension) As PensionDeduction, (MedicalAllow) As MedicalAllowance, (SecurityAllow) As SecurityAllowance, GradeLevel.GradeLevel, Departments.DepartmentName, Employees.EntertainmentAllow, Employees.NewspaperAllow, Employees.LeaveAllow FROM Employees LEFT JOIN GradeLevel ON Employees.GradeLevelId = " +
-				"GradeLevel.Id LEFT JOIN Departments ON Employees.DepartmentId = Departments.Id LEFT JOIN JobTitles ON Employees.JobTitleId = " +
-				$"JobTitles.Id LEFT JOIN Banks On Employees.BankCode = Banks.Code {glSchema} ORDER BY Employees.Id DESC";
 
-			string SQL2 = $"SELECT Top 50 Projects.PID, Projects.ProjectName, ProjectLocation.Location, ProjectCategory.CatName FROM  Projects INNER JOIN ProjectCategory ON Projects.PCID = ProjectCategory.PCID LEFT OUTER JOIN ProjectLocation ON Projects.LID = ProjectLocation.PLID {glSchema} ORDER BY Projects.PID DESC";
+			string SQL2 = $"SELECT Top 50  ROW_NUMBER() OVER (ORDER BY Projects.PID DESC) As SrNo, Projects.PID, Projects.ProjectName, ProjectLocation.Location, ProjectCategory.CatName, State.StateName FROM  Projects INNER JOIN ProjectCategory ON Projects.PCID = ProjectCategory.PCID INNER JOIN State ON Projects.SID = State.SID LEFT OUTER JOIN ProjectLocation ON Projects.LID = ProjectLocation.PLID {glSchema} ORDER BY Projects.PID DESC";
 
 			Projects = db.LoadData<MyProjectModel, dynamic>(SQL2, new { }, connectionStringName, false).ToList();
 
