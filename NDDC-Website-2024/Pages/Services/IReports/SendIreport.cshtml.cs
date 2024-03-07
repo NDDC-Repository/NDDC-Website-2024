@@ -6,6 +6,7 @@ using NddcWebsiteLibrary.Model.CloudStorage;
 using NddcWebsiteLibrary.Model.IReport;
 
 using Microsoft.AspNetCore.Mvc.Rendering;
+using NddcWebsiteLibrary.Model.Validators;
 
 namespace NDDC_Website_2024.Pages.Services.IReports
 {
@@ -38,7 +39,18 @@ namespace NDDC_Website_2024.Pages.Services.IReports
 
         public async Task<IActionResult> OnPost()
         {
-            if (ModelState.IsValid)
+            var validator = new IReportValidator();
+            var result = validator.Validate(Ireport);
+
+            //if (!result.IsValid)
+            //{
+            //    foreach (var error in result.Errors)
+            //    {
+            //        ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+            //    }
+            //}
+
+            if (result.IsValid)
             {
                 if (Upload1 != null)
                 {
