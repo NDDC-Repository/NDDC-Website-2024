@@ -9,12 +9,13 @@
             <h1 class="section-title text-center">Send iReport</h1>
             <row class="d-flex justify-content-center">
                 <div class="col-lg-8">
-                    <form class="contact-form  contact-form-validated" method="post" enctype="multipart/form-data">
+                    <form class="contact-form" method="post" enctype="multipart/form-data">
                         <div class="row row-gutter-10">
                             <div class="col-12 col-lg-12">
                                 <label for="floatingInput" class="fs-6 ps-4 pb-2 text-dark">Tell Us What You Want To Report On</label>
                                 <div class="input-group form-floating mb-3 d-flex align-items-center">
                                     <select asp-for="@Model.Ireport.Type" class="form-select input-text" aria-label="Select what you want to report on">
+                                        <option value="">Select Report Title</option>
                                         <option value="Ongoing Project">NDDC Ongoing Project</option>
                                         <option value="Abandoned Project">NDDC Abandoned Project</option>
                                         <option value="Project Quality">Poor Project Quality</option>
@@ -22,22 +23,25 @@
                                         <option value="NDDC Program">NDDC Program</option>
                                         <option value="Other">Other</option>
                                     </select>
-
+                                    <span class="text-danger" asp-validation-for="@Model.Ireport.Type"></span>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <input type="text" asp-for="@Model.Ireport.Name" class="input-text" placeholder="Your name" aria-required="true">
+                                <span class="text-danger" asp-validation-for="@Model.Ireport.Name"></span>
                             </div><!-- col-12 col-lg-6 -->
                             <div class="col-12 col-lg-6">
                                 <input type="email" asp-for="@Model.Ireport.Email" class="input-text" placeholder="Email address" aria-required="true">
+                                <span class="text-danger" asp-validation-for="@Model.Ireport.Email"></span>
                             </div><!-- col-12 col-lg-6 -->
                             <div class="col-12 col-lg-6">
                                 <input type="text" asp-for="@Model.Ireport.Phone" class="input-text" placeholder="Phone number" aria-required="true">
+                                <span class="text-danger" asp-validation-for="@Model.Ireport.Phone"></span>
                             </div><!-- col-12 col-lg-6 -->
                             <div class="col-12 col-lg-6">
                                 <div class="input-group form-floating mb-3 d-flex align-items-center">
                                     <select asp-for="@Model.Ireport.State" class="form-select input-text" aria-label="Select your state">
-                                        <option value="None">Select Your State</option>
+                                        <option value="">Select Your State</option>
                                         <option value="Abia">Abia</option>
                                         <option value="AkwaIbom">Akwa Ibom</option>
                                         <option value="Bayelsa">Bayelsa</option>
@@ -48,11 +52,12 @@
                                         <option value="Ondo">Ondo</option>
                                         <option value="Rivers">Rivers</option>
                                     </select>
-
+                                    <span class="text-danger" asp-validation-for="@Model.Ireport.State"></span>
                                 </div>
                             </div><!-- col-12 col-lg-6 -->
                             <div class="col-12 col-lg-12">
                                 <input type="text" class="input-text" asp-for="@Model.Ireport.Location" placeholder="Enter Your Location" aria-required="true">
+                                <span class="text-danger" asp-validation-for="@Model.Ireport.Location"></span>
                             </div>
                             <div class="col-12 col-lg-12">
                                 <label for="floatingInput" class="fs-6 ps-4 pb-2 text-dark">Upload Photos</label>

@@ -5,6 +5,8 @@ using NddcWebsiteLibrary.Data.IReport;
 using NddcWebsiteLibrary.Model.CloudStorage;
 using NddcWebsiteLibrary.Model.IReport;
 
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 namespace NDDC_Website_2024.Pages.Services.IReports
 {
     public class SendIreportModel : PageModel
@@ -36,36 +38,78 @@ namespace NDDC_Website_2024.Pages.Services.IReports
 
         public async Task<IActionResult> OnPost()
         {
-            if (Upload1 != null)
+            if (ModelState.IsValid)
             {
-                string fileName1 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload1.FileName));
-                MyBlobResponseModel? response = await storage.UploadAsync(Upload1, fileName1);
-                Ireport.ImageUrl1 = response.Blob.Uri;
+                if (Upload1 != null)
+                {
+                    string fileName1 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload1.FileName));
+                    MyBlobResponseModel? response = await storage.UploadAsync(Upload1, fileName1);
+                    Ireport.ImageUrl1 = response.Blob.Uri;
+                }
+                if (Upload2 != null)
+                {
+                    string fileName2 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload2.FileName));
+                    MyBlobResponseModel? response = await storage.UploadAsync(Upload2, fileName2);
+                    Ireport.ImageUrl2 = response.Blob.Uri;
+                }
+                if (Upload3 != null)
+                {
+                    string fileName3 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload3.FileName));
+                    MyBlobResponseModel? response = await storage.UploadAsync(Upload3, fileName3);
+                    Ireport.ImageUrl3 = response.Blob.Uri;
+                }
+                if (Upload4 != null)
+                {
+                    string fileName4 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload4.FileName));
+                    MyBlobResponseModel? response = await storage.UploadAsync(Upload4, fileName4);
+                    Ireport.ImageUrl4 = response.Blob.Uri;
+                }
+
+                Ireport.DateAdded = DateTime.Now;
+                irep.AddIReport(Ireport);
+
+                return RedirectToPage("Success");
             }
-            if (Upload2 != null)
+            else
             {
-                string fileName2 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload2.FileName));
-                MyBlobResponseModel? response = await storage.UploadAsync(Upload2, fileName2);
-                Ireport.ImageUrl2 = response.Blob.Uri;
-            }
-            if (Upload3 != null)
-            {
-                string fileName3 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload3.FileName));
-                MyBlobResponseModel? response = await storage.UploadAsync(Upload3, fileName3);
-                Ireport.ImageUrl3 = response.Blob.Uri;
-            }
-            if (Upload4 != null)
-            {
-                string fileName4 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload4.FileName));
-                MyBlobResponseModel? response = await storage.UploadAsync(Upload4, fileName4);
-                Ireport.ImageUrl4 = response.Blob.Uri;
+                return Page();
             }
 
-            Ireport.DateAdded = DateTime.Now;
-            irep.AddIReport(Ireport);
 
-            return RedirectToPage("Index");
-            
+
+
+            //if (Upload1 != null)
+            //{
+            //    string fileName1 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload1.FileName));
+            //    MyBlobResponseModel? response = await storage.UploadAsync(Upload1, fileName1);
+            //    Ireport.ImageUrl1 = response.Blob.Uri;
+            //}
+            //if (Upload2 != null)
+            //{
+            //    string fileName2 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload2.FileName));
+            //    MyBlobResponseModel? response = await storage.UploadAsync(Upload2, fileName2);
+            //    Ireport.ImageUrl2 = response.Blob.Uri;
+            //}
+            //if (Upload3 != null)
+            //{
+            //    string fileName3 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload3.FileName));
+            //    MyBlobResponseModel? response = await storage.UploadAsync(Upload3, fileName3);
+            //    Ireport.ImageUrl3 = response.Blob.Uri;
+            //}
+            //if (Upload4 != null)
+            //{
+            //    string fileName4 = "IReports/" + Path.ChangeExtension(Path.GetRandomFileName(), Path.GetExtension(Upload4.FileName));
+            //    MyBlobResponseModel? response = await storage.UploadAsync(Upload4, fileName4);
+            //    Ireport.ImageUrl4 = response.Blob.Uri;
+            //}
+
+            //Ireport.DateAdded = DateTime.Now;
+            //irep.AddIReport(Ireport);
+
+            //return RedirectToPage("Success");
+
+
+
         }
     }
 }
