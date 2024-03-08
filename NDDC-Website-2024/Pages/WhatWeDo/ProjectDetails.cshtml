@@ -4,19 +4,62 @@
 }
 
 
-<section class="event-details-section">
+<section class="blog-section">
     <div class="container">
         <div class="blog-box lh-lg">
-            <h1 class="pb-4 border-bottom">Project Details</h1>
-            <row class="pt-3">
-                <div class="col-lg-8">
-                    <h1 class="fs-5 ps-4 pb-2  fw-normal">Title: <span>Reclamation Project At Ojobo Community, Delta State</span></h1>
-                    <h3 class="fs-5 ps-4 pb-2  fw-normal">LGA: <span>Reclamation Project At Ojobo Community, Delta State</span></h3>
-                    <h3 class="fs-5 ps-4 pb-2  fw-normal">Location: <span>Reclamation Project At Ojobo Community, Delta State</span></h3>
-                    <h3 class="fs-5 ps-4 pb-2  fw-normal">Commencement Date: <span>Reclamation Project At Ojobo Community, Delta State</span></h3>
-                    <h3 class="fs-5 ps-4 pb-2  fw-normal">Status: <span>Reclamation Project At Ojobo Community, Delta State</span></h3>
-                    <h3 class="fs-5 ps-4 pb-2  fw-normal">Project Type: <span>Reclamation Project At Ojobo Community, Delta State</span></h3>
-                    <h3 class="fs-5 ps-4 pb-2  fw-normal">Contractor: <span>Reclamation Project At Ojobo Community, Delta State</span></h3>
+            <h1 class="pb-4 border-bottom text-center">Project Details</h1>
+            <div class="d-flex justify-content-center">
+                <div class="card col-md-8 border-0 shadow-sm">
+                    <div class="card-header ps-4 py-4 d-flex">
+                        <h5 class="m-0">Reclamation Project At Ojobo Community, Delta State </h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item  ps-4 py-4 d-flex "><span class="col-md-4 fw-bold">LGA </span><span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></li>
+                        <li class="list-group-item  ps-4 py-4 d-flex "><span class="col-md-4 fw-bold">Location </span><span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></li>
+                        <li class="list-group-item  ps-4 py-4 d-flex "><span class="col-md-4 fw-bold">Commencement Date </span><span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></li>
+                        <li class="list-group-item  ps-4 py-4 d-flex "><span class="col-md-4 fw-bold">Status </span><span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></li>
+                        <li class="list-group-item  ps-4 py-4 d-flex "><span class="col-md-4 fw-bold">Project Type </span><span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></li>
+                        <li class="list-group-item  ps-4 py-4 d-flex "><span class="col-md-4 fw-bold">Contractor </span><span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></li>
+
+                    </ul>
+                </div>
+            </div>
+                @* <div class="">
+                    <h1 class=" ps-4 py-4  ">Title: <span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></h1>
+                    <h3 class=" ps-4 py-4  ">LGA: <span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></h3>
+                    <h3 class=" ps-4 py-4  ">Location: <span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></h3>
+                    <h3 class=" ps-4 py-4  ">Commencement Date: <span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></h3>
+                    <h3 class=" ps-4 py-4  ">Status: <span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></h3>
+                    <h3 class=" ps-4 py-4  ">Project Type: <span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></h3>
+                    <h3 class=" ps-4 py-4  ">Contractor: <span class=" col-md-8">Reclamation Project At Ojobo Community, Delta State</span></h3>
+
+                </div> *@
+                <div class=" d-flex justify-content-center mt-4">
+                <h1 class="p-4 fs-3 text-center col-md-8 m-0" style="background-color: rgba( 33,37,41 , 0.03);">
+                    Project Pictures
+                </h1>
+                </div>
+                <div id="gallery" class="col-md-12 pt-3 d-flex justify-content-center">
+                    <a class="col-md-2 rounded" data-lg-size="1000-600"
+                       data-src="/assets/image/department/plan-1.png">
+                        <img class="rounded" src="/assets/image/department/plan-1.png"
+                             alt="" width="180" height="100" />
+                    </a>
+                    <a class="col-md-2 rounded" data-lg-size="1000-600"
+                       data-src="/assets/image/department/plan-2.png">
+                        <img class="rounded" src="/assets/image/department/plan-2.png"
+                             alt="" width="180" height="100" />
+                    </a>
+                    <a class="col-md-2 rounded" data-lg-size="1000-600"
+                       data-src="/assets/image/department/plan-3.png">
+                        <img class="rounded"  src="/assets/image/department/plan-3.png"
+                             alt="" width="180" height="100" />
+                    </a>
+                    <a class="col-md-2 rounded" data-lg-size="1000-600"
+                       data-src="/assets/image/department/plan-4.jpg">
+                        <img class="rounded" src="/assets/image/department/plan-4.jpg"
+                             alt="" width="180" height="100" />
+                    </a>
 
                 </div>
         </div>
@@ -25,6 +68,47 @@
 
 
 @section Scripts {
-<script>
-</script>
+    <!-- Light Gallery -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.umd.min.js" integrity="sha512-GtFOSYOB4Gx5+0hQxi/nVFJk77Tvmmgs/Kdbl4PZLjiZ8RBRMiKU2r33gsdn19r4Nlnx9lDqKf8ZdOSNwdgUtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/fullscreen/lg-fullscreen.min.js" integrity="sha512-11B0rPDzvnSOYzAT37QdnYgt0z9Xg+wX5tckB1QKl5Znl8RPvrB5npo38K2jCt+Ad44udCfBiKt9D4jRdkSE1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/mediumZoom/lg-medium-zoom.min.js" integrity="sha512-2YGO4SLBlm8K0whW1s/ohvaEdA/GdBywKoHlz3yhXzKxrvzq2AjdprtDu6sGQZe8rjDX4X9m3YUI1W7ahRYVFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/pager/lg-pager.min.js" integrity="sha512-p/vQczdCk287Uzj8GS8480KbjCQ8MGzRrXoQ/XFJhySSxWlRzWfgmVk0bjsixwgvLlfddccXMo/sKLpSBONTzw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/relativeCaption/lg-relative-caption.min.js" integrity="sha512-QRsZVsmfEnbACIQuoM17u3529cvEAuClvRjBIZ+iKbOkrCRqT/Q3aupz5QGr6j336q6woOLkquUc7ZvTNuxB3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/rotate/lg-rotate.min.js" integrity="sha512-hmy1UozeMGRd6LjMO6S+uWsVJ5dsyLWOcolgvg1scR7o9+uXjSCGzx2bS855JI/o1C6vStutQ+UfW2F0PCid2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+@* <script>
+        const container = document.querySelector('#gallery');
+        window.lightGallery(container, {
+            selector: '.lg-item',
+            zoomFromOrigin: true,
+            download: true,
+            thumbnail: true,
+            plugins: [
+                lgZoom,
+                lgAutoplay,
+                lgFullscreen,
+                lgRotate,
+                lgShare,
+                lgThumbnail
+            ],
+        });
+</script> *@
+    <script>
+        let gallery = document.getElementById('gallery')
+        lightGallery(gallery, {
+            controls: true,
+            download: false,
+            thumbnail: true,
+            zoomFromOrigin: true,
+            plugins: [lgThumbnail, lgZoom, lgFullscreen, lgRotate, lgAutoplay],
+            thumbWidth: 100,
+            thumbHeight: 100
+        });
+    </script>
 }
