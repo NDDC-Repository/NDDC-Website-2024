@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace NDDC_Website_2024.Pages.WhatWeDo
+namespace NDDC_Website_2024.Pages.Services.ProjectDatabase
 {
-    public class ProjectDetailsModel : PageModel
+    public class ProjectDatabaseDetailsModel : PageModel
     {
         public void OnGet()
         {
