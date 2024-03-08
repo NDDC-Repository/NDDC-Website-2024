@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace NDDC_Website_2024.Pages.Services.ProjectDatabase
 {
-    public class ProjectDatabaseDetailsModel : PageModel
+    public class ProjectDetailsModel : PageModel
     {
         public void OnGet()
         {
