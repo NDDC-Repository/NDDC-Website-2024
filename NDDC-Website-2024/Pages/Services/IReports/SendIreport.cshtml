@@ -9,39 +9,69 @@
             <h1 class="section-title text-center">Send iReport</h1>
             <row class="d-flex justify-content-center">
                 <div class="col-lg-8">
-                    <form action="assets/inc/sendemail.php" class="contact-form  contact-form-validated" method="post" novalidate="novalidate">
+                    <form class="contact-form" method="post" enctype="multipart/form-data">
                         <div class="row row-gutter-10">
                             <div class="col-12 col-lg-12">
-                                <label for="floatingInput" class="fs-6 ps-4 pb-2 text-dark">Report Type</label>
+                                <label for="floatingInput" class="fs-6 ps-4 pb-2 text-dark">Tell Us What You Want To Report On</label>
                                 <div class="input-group form-floating mb-3 d-flex align-items-center">
-                                    <select class="form-select input-text" aria-label="Select what you want to report on">
-                                        <option value="1">NDDC Ongoing Project</option>
-                                        <option value="2">NDDC Abandoned Project</option>
-                                        <option value="3">Poor Project Quality</option>
-                                        <option value="4">Incompetent Contractor</option>
-                                        <option value="5">NDDC Employee</option>
-                                        <option value="6">NDDC Program</option>
-                                        <option value="7">Other</option>
+                                    <select asp-for="@Model.Ireport.Type" class="form-select input-text" aria-label="Select what you want to report on">
+                                        <option value="">Select Report Title</option>
+                                        <option value="Ongoing Project">NDDC Ongoing Project</option>
+                                        <option value="Abandoned Project">NDDC Abandoned Project</option>
+                                        <option value="Project Quality">Poor Project Quality</option>
+                                        <option value="Incompetent Contractor">Incompetent Contractor</option>
+                                        <option value="NDDC Program">NDDC Program</option>
+                                        <option value="Other">Other</option>
                                     </select>
-
+                                    <span class="text-danger" asp-validation-for="@Model.Ireport.Type"></span>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
-                                <input type="text" id="name" class="input-text" placeholder="Your name" name="name" aria-required="true">
+                                <input type="text" asp-for="@Model.Ireport.Name" class="input-text" placeholder="Your name" aria-required="true">
+                                <span class="text-danger" asp-validation-for="@Model.Ireport.Name"></span>
                             </div><!-- col-12 col-lg-6 -->
                             <div class="col-12 col-lg-6">
-                                <input type="email" id="email" class="input-text" placeholder="Email address" name="email" aria-required="true">
+                                <input type="email" asp-for="@Model.Ireport.Email" class="input-text" placeholder="Email address" aria-required="true">
+                                <span class="text-danger" asp-validation-for="@Model.Ireport.Email"></span>
                             </div><!-- col-12 col-lg-6 -->
                             <div class="col-12 col-lg-6">
-                                <input type="text" id="phone" class="input-text" placeholder="Phone number" name="phone" aria-required="true">
+                                <input type="text" asp-for="@Model.Ireport.Phone" class="input-text" placeholder="Phone number" aria-required="true">
+                                <span class="text-danger" asp-validation-for="@Model.Ireport.Phone"></span>
                             </div><!-- col-12 col-lg-6 -->
                             <div class="col-12 col-lg-6">
-                                <input type="text" id="location" class="input-text" placeholder="Location" name="Location" aria-required="true">
+                                <div class="input-group form-floating mb-3 d-flex align-items-center">
+                                    <select asp-for="@Model.Ireport.State" class="form-select input-text" aria-label="Select your state">
+                                        <option value="">Select Your State</option>
+                                        <option value="Abia">Abia</option>
+                                        <option value="AkwaIbom">Akwa Ibom</option>
+                                        <option value="Bayelsa">Bayelsa</option>
+                                        <option value="CrossRivers">Cross Rivers</option>
+                                        <option value="Delta">Delta</option>
+                                        <option value="Edo">Edo</option>
+                                        <option value="Imo">Imo</option>
+                                        <option value="Ondo">Ondo</option>
+                                        <option value="Rivers">Rivers</option>
+                                    </select>
+                                    <span class="text-danger" asp-validation-for="@Model.Ireport.State"></span>
+                                </div>
                             </div><!-- col-12 col-lg-6 -->
+                            <div class="col-12 col-lg-12">
+                                <input type="text" class="input-text" asp-for="@Model.Ireport.Location" placeholder="Enter Your Location" aria-required="true">
+                                <span class="text-danger" asp-validation-for="@Model.Ireport.Location"></span>
+                            </div>
                             <div class="col-12 col-lg-12">
                                 <label for="floatingInput" class="fs-6 ps-4 pb-2 text-dark">Upload Photos</label>
                                 <div class="input-text form-floating mb-3 d-flex align-items-center">
-                                    <input type="file" id="Photos" class="" placeholder="Upload Photos" name="Photos" aria-required="true">
+                                    <input type="file" class="" asp-for="Upload1" placeholder="Upload Photos" aria-required="true">
+                                </div>
+                                <div class="input-text form-floating mb-3 d-flex align-items-center">
+                                    <input type="file" asp-for="Upload2" class="" placeholder="Upload Photos" aria-required="true">
+                                </div>
+                                <div class="input-text form-floating mb-3 d-flex align-items-center">
+                                    <input type="file" asp-for="Upload3" class="" placeholder="Upload Photos" aria-required="true">
+                                </div>
+                                <div class="input-text form-floating mb-3 d-flex align-items-center">
+                                    <input type="file" asp-for="Upload4" class="" placeholder="Upload Photos" aria-required="true">
                                 </div>
                             </div>
                             @* <div class="col-12 col-lg-12">
@@ -51,10 +81,10 @@
                                 </div>
                             </div> *@
                             <div class="col-12 col-lg-12">
-                                <textarea name="message" placeholder="Enter Your Comment" class="input-text" aria-required="true"></textarea>
+                                <textarea asp-for="@Model.Ireport.Comment" placeholder="Enter Your Comment" class="input-text" aria-required="true"></textarea>
                             </div><!-- col-12 col-lg-12 -->
                             <div class="col-12 col-lg-12 d-flex justify-content-center">
-                                <button class="btn btn-primary">Send a Message</button>
+                                <button class="btn btn-primary" type="submit">Send Report</button>
                             </div><!-- col-12 col-lg-12 -->
                         </div><!-- row -->
                     </form><!-- contact-form -->
