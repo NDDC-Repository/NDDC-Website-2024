@@ -2,18 +2,25 @@
 @model NDDC_Website_2024.Pages.WhoWeAre.VisionModel
 @{
 }
+
 <section class="header-img" style="background-image: url(/assets/image/bg/about-3.jpg);">
-		<div class="container">
-			<div class="page-breadcrumbs">
-				<ul class="list-unstyled">
-					<li><a href="/index">Home</a></li>
-					<li>Who We Are</li>
-				</ul><!-- list-unstyled -->
-			</div><!-- page-breadcrumbs -->
-			<div class="page-banner-title">
-				<h3>Who We Are</h3>
-			</div><!-- page-banner-title -->
-		</div><!-- container -->			
+    <div class="container">
+		<nav class="" style="--bs-breadcrumb-divider: '>'; top: 0px; right: 40px; position: absolute; " aria-label="breadcrumb">
+			<ol class="bg-white breadcrumb justify-content-end px-4 pt-2 mb-0" style="--bs-bg-opacity: .5;">
+				<li class="breadcrumb-item text-light"><a href="/index" class="text-light">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Who We Are</li>
+            </ol>
+        </nav>
+		<div class="page-breadcrumbs">
+			<ul class="list-unstyled">
+				<li><a href="/index">Home</a></li>
+				<li>Who We Are</li>
+			</ul><!-- list-unstyled -->
+		</div><!-- page-breadcrumbs -->
+		<div class="page-banner-title">
+			<h3>Who We Are</h3>
+		</div><!-- page-banner-title -->
+	</div><!-- container -->			
 </section>
 <section class="mayor-section py-5">
 	<div class="container-fluid container-xxl">
