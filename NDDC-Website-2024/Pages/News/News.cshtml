@@ -104,10 +104,10 @@
 				<div class="row row-gutter-y-155 m-0">
 					@foreach (var item in Model.NewsList)
 				{
-					<div class="card blog-card border-0 border-top my-3 p-0" style="background-color: unset;border-radius: 0;">
+						<div class="card blog-card border-0 border-top my-4 p-0" style="background-color:  #e8e9e9;border-radius: 0;">
 							<div class="card-body col-lg-12 d-flex p-0">
-								<img src="@Model._containerUrl@item.ImageUrl" width="150" height="150" class="col-lg-3 pe-3" alt="img-184">
-								<div class="col-lg-9 d-grid">
+								<img src="@Model._containerUrl@item.ImageUrl" width="150" height="150" class="col-lg-3 pe-3 border-end border-white" alt="img-184">
+								<div class="col-lg-9 d-grid ">
 								@* <div class="blog-card-meta m-0 d-flex justify-content-end" style="background-color: #2dcd7c; transform: none;">
 									<span class="text-white">
 											@item.PublishDate.ToString("dd/MM/yy")
