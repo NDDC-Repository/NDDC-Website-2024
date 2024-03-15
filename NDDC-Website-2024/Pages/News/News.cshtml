@@ -27,10 +27,41 @@
 	<div class="row">
 		<div class="section-title-box text-center">
 			<div class="section-tagline">News</div>
-			<h2 class="section-title">Check Out Our Latest News</h2>
+			<h2 class="section-title">All News</h2>
+        </div>
+		<div class="d-flex justify-content-center">
+            <div class="col-lg-10">
+				<div class="blog-card" style="background-color: #e8e9e9;">
+                    <div class="blog-card-image">
+                        <img src="/assets/image/bg/about-3.jpg" width="600" height="300" class="w-100 mt-0" alt="img-184">
+                        <a style="top:unset;" href="/News/NewsDetails"></a>
+                    </div><!-- blog-card-image -->
+                    @* <div class="blog-card-date">
+                        <a href="/News/NewsDetails">23/02/24</a>
+                    </div><!-- blog-card-date --> *@
+                    <div class="blog-card-content text-start">
+                        @* <div class="blog-card-meta">
+                            <span class="author">
+                                by<a href="/News/NewsDetails">CreatedBy</a>
+                            </span><!-- author -->
+                        </div><!-- blog-card-meta --> *@
+                        <div class="" style="height: 10rem;overflow: hidden;">
+                            <h5 style="height: 2.5rem;overflow: hidden;"><a href="/News/NewsDetails">RENEWED HOPE: A New Era for Vitality, Peace & Development.</a></h5>
+                            <p style="height: 6rem; overflow: hidden;">
+                                Many people have been asking, “what has happened to the NDDC’s medical outreach programmes?” The NDDC MD/CEO gives an insight to the Commission’s partnership.
+                            </p>
+                        </div>
+                        <span>
+                            <a class="text-success pt-2">Read more</a>
+                        </span><!-- comment -->
+
+                    </div><!-- blog-card-content -->
+                </div><!-- blog-card -->
+            </div><!-- col-lg-6 col-xl-4 -->
 		</div>
-		<div class="d-flex">
-			<div class="col-lg-4">
+		
+		<div class="d-flex justify-content-center">
+			@* <div class="col-lg-4">
 				<div class="sidebar">
 					<div class="sidebar-form-content">
 						<div class="sidebar__item sidebar__item--search">
@@ -64,8 +95,34 @@
 						</div><!-- sidebar-widget-tag-inner -->
 					</div><!-- sidebar-widget sidebar-widget-tag -->
 				</div><!-- sidebar -->
-			</div>
-			<div class="col-lg-8">
+			</div> *@
+
+
+			
+			
+			<div class="col-lg-10">
+				<div class="row row-gutter-y-155 m-0">
+					@foreach (var item in Model.NewsList)
+				{
+					<div class="card blog-card border-0 border-top my-3 p-0" style="background-color: unset;border-radius: 0;">
+							<div class="card-body col-lg-12 d-flex p-0">
+								<img src="@Model._containerUrl@item.ImageUrl" width="150" height="150" class="col-lg-3 pe-3" alt="img-184">
+								<div class="col-lg-9 d-grid">
+								@* <div class="blog-card-meta m-0 d-flex justify-content-end" style="background-color: #2dcd7c; transform: none;">
+									<span class="text-white">
+											@item.PublishDate.ToString("dd/MM/yy")
+									</span><!-- author -->
+								</div> *@
+									<h1 class="fs-5 mt-2 m-0">@item.Subject</h1>
+									<p class="m-0" style="height: 4.5rem; overflow: hidden; font-size: small;">@item.Summary</p>
+									<span>
+										<a class="text-success" style="font-size: small;" asp-route-nid="@item.NID" asp-page="NewsDetails">Read more</a>
+								</span><!-- comment -->
+							</div>
+						</div>
+					</div>
+				}
+				</div>
 				<div class="row row-gutter-y-155 m-0">
 					@foreach (var item in Model.NewsList)
                 {
@@ -78,7 +135,7 @@
 							<div class="blog-card-date">
 									<a href="/News/NewsDetails">@item.PublishDate.ToString("dd/MM/yy")</a>
 							</div><!-- blog-card-date -->
-							<div class="blog-card-content">
+							<div class="blog-card-content ">
 								<div class="blog-card-meta">
 									<span class="author">
 										by<a href="/News/NewsDetails">@item.CreatedBy</a>

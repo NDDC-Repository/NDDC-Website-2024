@@ -14,8 +14,8 @@
 </nav>
 <section class="news-details-section">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-4">
+		<div class="row justify-content-center">
+			@* <div class="col-lg-4">
 				<div class="sidebar">
 					<div class="sidebar-form-content">
 						<div class="sidebar__item sidebar__item--search">
@@ -49,7 +49,7 @@
 						</div><!-- sidebar-widget-tag-inner -->
 					</div><!-- sidebar-widget sidebar-widget-tag -->
 				</div><!-- sidebar -->
-			</div>
+			</div> *@
 			<div class="col-lg-8">
 				<div class="news-details-box-image">
 					<div class="news-details-box-image-inner">
@@ -76,12 +76,28 @@
 				
 				<div class="news-details-content-box">
 					<h4>@Model.NewsDetails.Subject</h4>
-					<div>
+					<div class="pb-3">
 						@Html.Raw(Model.NewsDetails.Details)
 					</div>
 					
 					
                 </div><!-- /.news-details-content-box -->
+				<div class="news-details-share-box pb-3" style="border-bottom: 1px solid var(--thm-border);">
+					<div class="news-details-inner justify-content-end">
+						<div class="sidebar-widget-tag-inner">
+							<a class="fs-6" href="news-details.html"><i class="fa-solid fa-share pe-2"></i>Share</a>
+						</div>
+						<!--news-details-list-->
+						<div class="news-details-list">
+							<div class="news-details-socials">
+								<a href="#"><i class="fa-brands fa-twitter"></i></a>
+								<a href="#"><i class="fa-brands fa-facebook"></i></a>
+								<a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+								<a href="#"><i class="fa-brands fa-instagram"></i></a>
+							</div><!-- news-details-socials -->
+						</div><!-- news-details-list -->
+					</div><!-- news-details-inner -->
+				</div>
 				<br />
 				<h3>Photo Gallery</h3>
 				<div class="row row-gutter-30">
